@@ -21,10 +21,8 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+library UNISIM;
+use UNISIM.VComponents.all;
 
 entity h_sync_gen is
     port ( clk       : in  std_logic;
@@ -42,6 +40,7 @@ architecture Behavioral of h_sync_gen is
 	type states is (activeVid, frontPorch, sync, backPorch);
 	signal state_reg, state_next : states;
 	signal count_reg, count_next : unsigned (10 downto 0);
+	signal donezoes, blank_sig : std_logic;
 begin
 
 
@@ -82,6 +81,61 @@ begin
 		else 
 			count_next <= (others => '0');
 		end if;
+	end process;
+	
+	
+	--C2C Jason Mossing gave me the idea to use a case statement with nested if statements to decide when to choose states
+	process(state_reg, clk)
+	begin
+		case state_reg is
+		
+		when backPorch =>
+			if (count_reg < 33) then
+				state_next <= backPorch;
+				donezoes <= '0';
+				blank_sig <= '1';
+			else 
+				state_next <= activeVid;
+				donezoes <= '1';
+				blank_sig <= '1';
+			end if;
+		
+		when sync =>
+			if (count_reg < 96) then
+				state_next <= sync;
+				donezoes <= '0';
+				blank_sig <= '1';
+			else 
+				state_next <= backPorch;
+				blank_sig <= '1';
+				donezoes <= '0';
+			end if;
+		
+		when frontPorch =>
+			if(count_reg < 16) then
+				state_next <= frontPorch;
+				donezoes <= '0';
+				blank_sig <= '1';
+			else 
+				state_next <= sync;
+				blank_sig <= '1';
+				donezoes <= '0';
+			end if;
+
+		
+		when activeVid =>
+			if(count_reg <640) then
+				state_next <= activeVid;
+				donezoes <= '0';
+				blank_sig <= '0';
+			else 
+				state_next <= frontPorch;
+				blank_sig <= '0';
+				donezoes <= '0';
+			end if;
+			
+	   end case;
+		
 	end process;
 	
 
