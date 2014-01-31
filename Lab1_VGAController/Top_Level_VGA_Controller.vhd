@@ -20,59 +20,10 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+
 library UNISIM;
 use UNISIM.VComponents.all;
 
-entity h_sync_gen is
-    port ( clk       : in  std_logic;
-           reset     : in  std_logic;
-           h_sync    : out std_logic;
-           blank     : out std_logic;
-           completed : out std_logic;
-           column    : out unsigned(10 downto 0)
-     );
-end h_sync_gen;
-
-entity v_sync_gen is
-    port ( clk         : in  std_logic;
-           reset       : in std_logic;
-           h_blank     : in std_logic;
-           h_completed : in std_logic;
-           v_sync      : out std_logic;
-           blank       : out std_logic;
-           completed   : out std_logic;
-           row         : out unsigned(10 downto 0)
-     );
-end v_sync_gen;
-entity vga_sync is
-    port ( clk         : in  std_logic;
-           reset       : in  std_logic;
-           h_sync      : out std_logic;
-           v_sync      : out std_logic;
-           v_completed : out std_logic;
-           blank       : out std_logic;
-           row         : out unsigned(10 downto 0);
-           column      : out unsigned(10 downto 0)
-     );
-end vga_sync;
-
-entity pixel_gen is
-    port ( row      : in unsigned(10 downto 0);
-           column   : in unsigned(10 downto 0);
-           blank    : in std_logic;
-           r        : out std_logic_vector(7 downto 0);
-           g        : out std_logic_vector(7 downto 0);
-           b        : out std_logic_vector(7 downto 0));
-end pixel_gen;
-
-entity atlys_lab_video is
-    port ( 
-             clk   : in  std_logic; -- 100 MHz
-             reset : in  std_logic;
-             tmds  : out std_logic_vector(3 downto 0);
-             tmdsb : out std_logic_vector(3 downto 0)
-         );
-end atlys_lab_video;
 
 
 architecture Schriner_VGA of atlys_lab_video is

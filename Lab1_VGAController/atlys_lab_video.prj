@@ -1,1 +1,4 @@
+vhdl work "TDMS_encoder.vhd"
+vhdl work "dvid.vhd"
+vhdl work "atlys_lab_video.vhd"
 vhdl work "Top_Level_VGA_Controller.vhd"

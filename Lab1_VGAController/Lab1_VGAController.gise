@@ -22,10 +22,28 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Lab1_VGAController.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TDMS_encoder.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="TDMS_encoder.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="TDMS_encoder.xst"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="atlys_lab_video.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="atlys_lab_video.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="atlys_lab_video.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="count_reg.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="count_reg.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="count_reg.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="dvid.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="dvid.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="dvid.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="pixel_gen.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="pixel_gen.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="pixel_gen.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="v_sync_gen.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="v_sync_gen.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="v_sync_gen.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="vga_sync.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="vga_sync.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="vga_sync.xst"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
