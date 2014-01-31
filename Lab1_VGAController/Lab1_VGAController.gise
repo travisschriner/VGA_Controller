@@ -35,6 +35,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="dvid.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="dvid.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="dvid.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="h_sync_gen.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="h_sync_gen.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="h_sync_gen.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="pixel_gen.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="pixel_gen.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="pixel_gen.xst"/>

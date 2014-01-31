@@ -38,8 +38,52 @@ end h_sync_gen;
 
 architecture Behavioral of h_sync_gen is
 
+	--had to make my own type...
+	type states is (activeVid, frontPorch, sync, backPorch);
+	signal state_reg, state_next : states;
+	signal count_reg, count_next : unsigned (10 downto 0);
 begin
 
+
+   --state reg
+	process(clk, reset)
+	begin
+		if(reset ='1') then
+			state_reg <= activeVid;
+		elsif( rising_edge(clk)) then
+			state_reg <= state_next;
+		end if;
+	end process;
+	
+	
+	
+	--count reg
+	process(clk, reset)
+	begin
+		if (reset = '1') then
+			count_reg <= (others => '0');
+		elsif( rising_edge(clk)) then
+			if(state_reg = state_next) then
+				count_reg <= count_next;
+			else 
+				count_reg <= (others => '0');
+			end if;
+		end if;
+	end process;
+	
+	
+	
+	--next count logic
+	process( state_reg, state_next, count_reg, clk)
+	begin 
+	
+		if (state_next = state_reg) then 
+			count_next <= count_reg +1;
+		else 
+			count_next <= (others => '0');
+		end if;
+	end process;
+	
 
 end Behavioral;
 
