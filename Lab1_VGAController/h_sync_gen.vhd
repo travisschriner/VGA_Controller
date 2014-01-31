@@ -29,7 +29,7 @@ architecture Behavioral of h_sync_gen is
 	type states is (activeVid, frontPorch, sync, backPorch);
 	signal state_reg, state_next : states;
 	signal count_reg, count_next : unsigned (10 downto 0);
-	signal donezoes, blank_sig : std_logic;
+	signal donezoes : std_logic;
 begin
 
 
@@ -62,7 +62,7 @@ begin
 	
 	
 	--next count logic
-	process( state_reg, state_next, count_reg, clk)
+	process( state_reg, state_next, count_reg)
 	begin 
 	
 		if (state_next = state_reg) then 
@@ -74,7 +74,7 @@ begin
 	
 	
 	--C2C Jason Mossing gave me the idea to use a case statement with nested if statements to decide when to choose states
-	process(state_reg, clk)
+	process(state_reg)
 	begin
 		case state_reg is
 		
@@ -93,7 +93,6 @@ begin
 				donezoes <= '0';
 			else 
 				state_next <= backPorch;
-				blank_sig <= '1';
 				donezoes <= '0';
 			end if;
 		
