@@ -93,18 +93,15 @@ begin
 			if (count_reg < 33) then
 				state_next <= backPorch;
 				donezoes <= '0';
-				blank_sig <= '1';
 			else 
 				state_next <= activeVid;
 				donezoes <= '1';
-				blank_sig <= '1';
 			end if;
 		
 		when sync =>
 			if (count_reg < 96) then
 				state_next <= sync;
 				donezoes <= '0';
-				blank_sig <= '1';
 			else 
 				state_next <= backPorch;
 				blank_sig <= '1';
@@ -115,10 +112,8 @@ begin
 			if(count_reg < 16) then
 				state_next <= frontPorch;
 				donezoes <= '0';
-				blank_sig <= '1';
 			else 
 				state_next <= sync;
-				blank_sig <= '1';
 				donezoes <= '0';
 			end if;
 
@@ -127,16 +122,24 @@ begin
 			if(count_reg <640) then
 				state_next <= activeVid;
 				donezoes <= '0';
-				blank_sig <= '0';
 			else 
 				state_next <= frontPorch;
-				blank_sig <= '0';
 				donezoes <= '0';
 			end if;
 			
 	   end case;
 		
 	end process;
+	
+	--output logic
+		h_sync <= '0' when state_reg = sync else
+					 '1';
+		blank <= '0' when state_reg = activeVid else
+					'1';
+		completed <= donezoes;
+		
+		column <=  count_reg when state_reg = activeVid else
+					(others => '0');
 	
 
 end Behavioral;
