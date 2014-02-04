@@ -26,10 +26,10 @@ end h_sync_gen;
 architecture Behavioral of h_sync_gen is
 
 	--had to make my own type...
-	type states is (activeVid, frontPorch, sync, backPorch);
+	type states is (activeVid, frontPorch, sync, backPorch, Complete);
 	signal state_reg, state_next : states;
-	signal count_reg, count_next : unsigned (10 downto 0);
-	signal donezoes : std_logic;
+	signal count_reg, count_next : unsigned (11 downto 0);
+	
 begin
 
 
@@ -51,83 +51,69 @@ begin
 		if (reset = '1') then
 			count_reg <= (others => '0');
 		elsif( rising_edge(clk)) then
-			if(state_reg = state_next) then
-				count_reg <= count_next;
-			else 
-				count_reg <= (others => '0');
-			end if;
+			count_reg <= count_next;
 		end if;
 	end process;
 	
+	count_next <= (others => '0') when state_reg /= state_next else
+						count_reg +1;
 	
 	
-	--next count logic
-	process( state_reg, state_next, count_reg)
-	begin 
+
 	
-		if (state_next = state_reg) then 
-			count_next <= count_reg +1;
-		else 
-			count_next <= (others => '0');
-		end if;
-	end process;
-	
-	
+			
+			
 	--C2C Jason Mossing gave me the idea to use a case statement with nested if statements to decide when to choose states
-	process(state_reg)
+	process(state_reg, count_reg)
 	begin
+		state_next <= state_reg;
+		
 		case state_reg is
 		
-		when backPorch =>
-			if (count_reg < 33) then
-				state_next <= backPorch;
-				donezoes <= '0';
-			else 
-				state_next <= activeVid;
-				donezoes <= '1';
-			end if;
-		
-		when sync =>
-			if (count_reg < 96) then
-				state_next <= sync;
-				donezoes <= '0';
-			else 
-				state_next <= backPorch;
-				donezoes <= '0';
-			end if;
-		
-		when frontPorch =>
-			if(count_reg < 16) then
-				state_next <= frontPorch;
-				donezoes <= '0';
-			else 
-				state_next <= sync;
-				donezoes <= '0';
-			end if;
-
-		
+		--active vid logic
 		when activeVid =>
-			if(count_reg <640) then
-				state_next <= activeVid;
-				donezoes <= '0';
-			else 
+			if(count_reg =639) then
 				state_next <= frontPorch;
-				donezoes <= '0';
 			end if;
 			
-	   end case;
+		--frontPorch logic	
+		when frontPorch =>
+			if(count_reg = 15) then
+				state_next <= sync;
+			end if;
+			
+		--sync logic	
+		when sync =>
+			if (count_reg = 95) then
+				state_next <= backPorch;
+			end if;
+			
+		--backporch logich	
+		when backPorch =>
+			if (count_reg = 31) then
+				state_next <= Complete;
+			end if;
+			
+		--completed logich	
+		when Complete =>
+			if (count_reg = 0) then
+				state_next <= activeVid;
+			end if;
+		
+		end case;
 		
 	end process;
 	
 	--output logic
-		h_sync <= '0' when state_reg = sync else
-					 '1';
-		blank <= '0' when state_reg = activeVid else
-					'1';
-		completed <= donezoes;
+		h_sync    <= '0' when state_reg = sync else
+					    '1';
+		blank     <= '0' when state_reg = activeVid else
+					    '1';
+		completed <= '1' when state_reg = complete else
+						 '0';
 		
-		column <=  count_reg when state_reg = activeVid else
-					(others => '0');
+		column    <=  count_reg when state_reg = activeVid else
+					    (others => '0');
 	
 
 end Behavioral;
