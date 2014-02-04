@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to C:/Users/C15Travis.Schriner/Documents/2dig/ECE383/Lab1_VGAController/Lab1_VGAController/xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: dvid.prj
 
@@ -48,7 +48,7 @@ Parsing architecture <Behavioral> of entity <dvid>.
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.82 secs
+Total CPU time to Xst completion: 5.04 secs
  
 --> 
 

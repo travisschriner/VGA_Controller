@@ -1,30 +1,17 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: USAFA DFEC
+-- Engineer: C2C Travis Schriner
 -- 
 -- Create Date:    12:02:27 01/31/2014 
 -- Design Name: 
 -- Module Name:    atlys_lab_video - Behavioral 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
---
--- Dependencies: 
---
--- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
---
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+library UNISIM;
+use UNISIM.VComponents.all;
 
 entity atlys_lab_video is
     port ( 
@@ -35,11 +22,91 @@ entity atlys_lab_video is
          );
 end atlys_lab_video;
 
-
-architecture Behavioral of atlys_lab_video is
-
+architecture Schriner_VGA of atlys_lab_video is
+Signal h_sync_sig, v_sync_sig, v_complete_sig, blank_sig : std_logic;
+signal row, column : unsigned(10 downto 0);
+signal r_pixel, g_pixel, b_pixel : std_logic_vector (7 downto 0);
+	 
+	 
 begin
 
+    -- Clock divider - creates pixel clock from 100MHz clock
+    inst_DCM_pixel: DCM
+    generic map(
+                   CLKFX_MULTIPLY => 2,
+                   CLKFX_DIVIDE   => 8,
+                   CLK_FEEDBACK   => "1X"
+               )
+    port map(
+                clkin => clk,
+                rst   => reset,
+                clkfx => pixel_clk
+            );
 
-end Behavioral;
+    -- Clock divider - creates HDMI serial output clock
+    inst_DCM_serialize: DCM
+    generic map(
+                   CLKFX_MULTIPLY => 10, -- 5x speed of pixel clock
+                   CLKFX_DIVIDE   => 8,
+                   CLK_FEEDBACK   => "1X"
+               )
+    port map(
+                clkin => clk,
+                rst   => reset,
+                clkfx => serialize_clk,
+                clkfx180 => serialize_clk_n
+            );
+				
+				
+		vga_sync_instance : entity work.vga_sync(behavioral)
+			port map (	clk   		=> clk,
+							reset  		=> reset,
+							h_sync   	=> h_sync_sig,
+							v_sync   	=> v_sync_sig,
+							v_completed => v_completed_sig,
+							blank       => blank_sig,
+							row         => row_sig,
+							column      => column_sig
+						);
+						
+		pixel_gen_instance : entity work.pixel_gen(behavioral)
+			port map ( 	row      => row_sig,
+							column   => column_sig,
+							blank    => blank_sig,
+							r        => r_pixel,
+							g        => g_pixel,
+							b        => b_pixel
+						);
+			
 
+   
+    -- Convert VGA signals to HDMI (actually, DVID ... but close enough)
+    inst_dvid: entity work.dvid
+    port map(
+                clk       => serialize_clk,
+                clk_n     => serialize_clk_n, 
+                clk_pixel => pixel_clk,
+                red_p     => red,
+                green_p   => green,
+                blue_p    => blue,
+                blank     => blank,
+                hsync     => h_sync,
+                vsync     => v_sync,
+                -- outputs to TMDS drivers
+                red_s     => red_s,
+                green_s   => green_s,
+                blue_s    => blue_s,
+                clock_s   => clock_s
+            );
+
+    -- Output the HDMI data on differential signalling pins
+    OBUFDS_blue  : OBUFDS port map
+        ( O  => TMDS(0), OB => TMDSB(0), I  => blue_s  );
+    OBUFDS_red   : OBUFDS port map
+        ( O  => TMDS(1), OB => TMDSB(1), I  => green_s );
+    OBUFDS_green : OBUFDS port map
+        ( O  => TMDS(2), OB => TMDSB(2), I  => red_s   );
+    OBUFDS_clock : OBUFDS port map
+        ( O  => TMDS(3), OB => TMDSB(3), I  => clock_s );
+
+end Schriner_VGA;
