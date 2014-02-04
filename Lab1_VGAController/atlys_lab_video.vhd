@@ -23,9 +23,9 @@ entity atlys_lab_video is
 end atlys_lab_video;
 
 architecture Schriner_VGA of atlys_lab_video is
-Signal red_s, green_s, blue_s, clock_s, h_sync_sig, v_sync_sig, v_completed_sig, blank_sig, pixel_clk, serialize_clk, serialize_clk_n : std_logic;
-signal row_sig, column_sig : unsigned(10 downto 0);
-signal r_pixel, g_pixel, b_pixel : std_logic_vector (7 downto 0);
+Signal red_s, green_s, blue_s, clock_s, h_sync, v_sync, v_completed, blank, pixel_clk, serialize_clk, serialize_clk_n : std_logic;
+signal row, column : unsigned(10 downto 0);
+signal red, green, blue : std_logic_vector (7 downto 0);
 	 
 	 
 begin
@@ -61,21 +61,21 @@ begin
 		vga_sync_instance : entity work.vga_sync(behavioral)
 			port map (	clk   		=> clk,
 							reset  		=> reset,
-							h_sync   	=> h_sync_sig,
-							v_sync   	=> v_sync_sig,
-							v_completed => v_completed_sig,
-							blank       => blank_sig,
-							row         => row_sig,
-							column      => column_sig
+							h_sync   	=> h_sync,
+							v_sync   	=> v_sync,
+							v_completed => v_completed,
+							blank       => blank,
+							row         => row,
+							column      => column
 						);
 						
 		pixel_gen_instance : entity work.pixel_gen(behavioral)
-			port map ( 	row      => row_sig,
-							column   => column_sig,
-							blank    => blank_sig,
-							r        => r_pixel,
-							g        => g_pixel,
-							b        => b_pixel
+			port map ( 	row      => row,
+							column   => column,
+							blank    => blank,
+							r        => red,
+							g        => green,
+							b        => blue
 						);
 			
 
@@ -86,12 +86,12 @@ begin
                 clk       => serialize_clk,
                 clk_n     => serialize_clk_n, 
                 clk_pixel => pixel_clk,
-                red_p     => r_pixel,
-                green_p   => g_pixel,
-                blue_p    => b_pixel,
-                blank     => blank_sig,
-                hsync     => h_sync_sig,
-                vsync     => v_sync_sig,
+                red_p     => red,
+                green_p   => green,
+                blue_p    => blue,
+                blank     => blank,
+                hsync     => h_sync,
+                vsync     => v_sync,
                 -- outputs to TMDS drivers
                 red_s     => red_s,
                 green_s   => green_s,
