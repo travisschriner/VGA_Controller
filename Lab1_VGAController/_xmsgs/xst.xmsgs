@@ -5,61 +5,122 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 43: &lt;<arg fmt="%s" index="1">pixel_clk</arg>&gt; is not declared.
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\h_sync_gen.vhd" Line 82: <arg fmt="%s" index="1">count_reg</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 43: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">clkfx</arg> cannot be an expression
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\h_sync_gen.vhd" Line 91: <arg fmt="%s" index="1">count_reg</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 56: &lt;<arg fmt="%s" index="1">serialize_clk</arg>&gt; is not declared.
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\h_sync_gen.vhd" Line 100: <arg fmt="%s" index="1">count_reg</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 56: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">clkfx</arg> cannot be an expression
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\h_sync_gen.vhd" Line 110: <arg fmt="%s" index="1">count_reg</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 57: &lt;<arg fmt="%s" index="1">serialize_clk_n</arg>&gt; is not declared.
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\v_sync_gen.vhd" Line 98: <arg fmt="%s" index="1">count_reg</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 57: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">clkfx180</arg> cannot be an expression
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\v_sync_gen.vhd" Line 107: <arg fmt="%s" index="1">count_reg</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 66: &lt;<arg fmt="%s" index="1">v_completed_sig</arg>&gt; is not declared.
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\v_sync_gen.vhd" Line 116: <arg fmt="%s" index="1">count_reg</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 66: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">v_completed</arg> cannot be an expression
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\v_sync_gen.vhd" Line 126: <arg fmt="%s" index="1">count_reg</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 68: &lt;<arg fmt="%s" index="1">row_sig</arg>&gt; is not declared.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd</arg>&quot; line <arg fmt="%s" index="2">61</arg>: Output port &lt;<arg fmt="%s" index="3">v_completed</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">vga_sync_instance</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 68: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">row</arg> cannot be an expression
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">h_blank</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 69: &lt;<arg fmt="%s" index="1">column_sig</arg>&gt; is not declared.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">row</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 69: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">column</arg> cannot be an expression
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">column</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 73: &lt;<arg fmt="%s" index="1">row_sig</arg>&gt; is not declared.
+<msg type="info" file="Xst" num="1901" delta="new" >Instance <arg fmt="%s" index="1">inst_DCM_pixel</arg> in unit <arg fmt="%s" index="2">atlys_lab_video</arg> of type <arg fmt="%s" index="3">DCM</arg> has been replaced by <arg fmt="%s" index="4">DCM_SP</arg>
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 74: &lt;<arg fmt="%s" index="1">column_sig</arg>&gt; is not declared.
+<msg type="info" file="Xst" num="1901" delta="new" >Instance <arg fmt="%s" index="1">inst_DCM_serialize</arg> in unit <arg fmt="%s" index="2">atlys_lab_video</arg> of type <arg fmt="%s" index="3">DCM</arg> has been replaced by <arg fmt="%s" index="4">DCM_SP</arg>
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 86: &lt;<arg fmt="%s" index="1">serialize_clk</arg>&gt; is not declared.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">count_reg_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">v_sync_gen</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 87: &lt;<arg fmt="%s" index="1">serialize_clk_n</arg>&gt; is not declared.
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">count_reg_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">v_sync_gen</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 88: &lt;<arg fmt="%s" index="1">pixel_clk</arg>&gt; is not declared.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">count_reg_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">v_sync_gen</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 89: &lt;<arg fmt="%s" index="1">red</arg>&gt; is not declared.
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">count_reg_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">v_sync_gen</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\atlys_lab_video.vhd" Line 90: &lt;<arg fmt="%s" index="1">green</arg>&gt; is not declared.
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">inst_dvid/latched_green_8</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">atlys_lab_video</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_green/encoded_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">atlys_lab_video</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">vga_sync_instance/h_sync_instance/count_reg_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">atlys_lab_video</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/dc_bias_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/dc_bias_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/dc_bias_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/dc_bias_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/dc_bias_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/dc_bias_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/dc_bias_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/dc_bias_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_green_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_green_5&gt; &lt;inst_dvid/latched_green_3&gt; &lt;inst_dvid/latched_green_1&gt; &lt;inst_dvid/latched_green_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_green_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_green_6&gt; &lt;inst_dvid/latched_green_4&gt; &lt;inst_dvid/latched_green_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_blue_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_blue_4&gt; &lt;inst_dvid/latched_blue_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_blue_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_blue_5&gt; &lt;inst_dvid/latched_blue_3&gt; &lt;inst_dvid/latched_blue_1&gt; &lt;inst_dvid/latched_blue_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_red/encoded_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_red/encoded_4&gt; &lt;inst_dvid/TDMS_encoder_red/encoded_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_red/encoded_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_red/encoded_5&gt; &lt;inst_dvid/TDMS_encoder_red/encoded_3&gt; &lt;inst_dvid/TDMS_encoder_red/encoded_1&gt; &lt;inst_dvid/TDMS_encoder_red/encoded_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_green/encoded_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/encoded_5&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_3&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_1&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_green/encoded_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/encoded_6&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_4&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_red/dc_bias_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_red/dc_bias_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_red_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_red_4&gt; &lt;inst_dvid/latched_red_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_red_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_red_5&gt; &lt;inst_dvid/latched_red_3&gt; &lt;inst_dvid/latched_red_1&gt; &lt;inst_dvid/latched_red_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/encoded_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_blue/encoded_4&gt; &lt;inst_dvid/TDMS_encoder_blue/encoded_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/encoded_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_blue/encoded_5&gt; &lt;inst_dvid/TDMS_encoder_blue/encoded_3&gt; &lt;inst_dvid/TDMS_encoder_blue/encoded_1&gt; &lt;inst_dvid/TDMS_encoder_blue/encoded_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

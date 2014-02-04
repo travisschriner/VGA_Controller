@@ -1,6 +1,9 @@
-set -tmpdir "C:/Users/C15Travis.Schriner/Documents/2dig/ECE383/Lab1_VGAController/Lab1_VGAController/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/C15Travis.Schriner/Documents/2dig/ECE383/Lab1_VGAController/Lab1_VGAController/xst"
-run -compileonly yes
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn atlys_lab_video.prj
+-ofn atlys_lab_video
+-ofmt NGC
 -p xc6slx45-3-fgg484
 -top atlys_lab_video
 -opt_mode Speed
@@ -47,4 +50,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn atlys_lab_video.prj
