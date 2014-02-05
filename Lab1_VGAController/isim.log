@@ -1,59 +1,13 @@
 ISim log file
-Running: C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\h_sync_testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/C15Travis.Schriner/Documents/2dig/ECE383/Lab1_VGAController/Lab1_VGAController/h_sync_testbench_isim_beh.wdb 
+Running: C:\Users\C15Travis.Schriner\Documents\2dig\ECE383\Lab1_VGAController\Lab1_VGAController\v_sync_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/C15Travis.Schriner/Documents/2dig/ECE383/Lab1_VGAController/Lab1_VGAController/v_sync_test_isim_beh.wdb 
 ISim P.15xf (signature 0xc3576ebc)
 This is a Full version of ISim.
-Time resolution is 1 ps
+ERROR: Resolution function required for the Net /v_sync_test/uut/state_reg driven by:
+/v_sync_test/uut//v_sync_gen.vhd:55
+/v_sync_test/uut//v_sync_gen.vhd:94
+Time resolution is 1 fs
 # onerror resume
 # wave add /
+No active Database
 # run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /h_sync_testbench/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-Finished circuit initialization process.
-# run 40.00us
-at 3110 ns: Error: active at 300 broke
-at 6610 ns: Error: front porch broke
-at 6770 ns: Error: sync pulse broke
-at 7670 ns: Error: back porch broke
-at 8150 ns: Error: completed signal broke
-ISim P.15xf (signature 0xc3576ebc)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /h_sync_testbench/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-Finished circuit initialization process.
-# run 40.00us
-at 3110 ns: Error: active at 300 broke
-at 6610 ns: Error: front porch broke
-at 6770 ns: Error: sync pulse broke
-at 7670 ns: Error: back porch broke
-at 8150 ns: Error: completed signal broke
-ISim P.15xf (signature 0xc3576ebc)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /h_sync_testbench/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-Finished circuit initialization process.
-# run 40.00us
-at 3110 ns: Error: active at 300 broke
-at 6610 ns: Error: front porch broke
-at 6770 ns: Error: sync pulse broke
-at 7670 ns: Error: back porch broke
-at 8150 ns: Error: completed signal broke
-ISim P.15xf (signature 0xc3576ebc)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /h_sync_testbench/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-Finished circuit initialization process.
-at 5 ns(2), Instance /h_sync_testbench/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-# run 40.00us
-at 3110 ns: Error: active at 300 broke
-at 8150 ns: Error: completed signal broke
-# run 40.00us
-# run 40.00us
-# run 40.00us
-# run 40.00us
-# run 40.00us
-# run 40.00us
-# run 40.00us
-# run 40.00us
+Unable to execute live simulation command.

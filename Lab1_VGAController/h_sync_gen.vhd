@@ -28,7 +28,10 @@ architecture Behavioral of h_sync_gen is
 	--had to make my own type...
 	type states is (activeVid, frontPorch, sync, backPorch, Complete);
 	signal state_reg, state_next : states;
-	signal count_reg, count_next : unsigned (11 downto 0);
+	signal count_reg, count_next : unsigned (10 downto 0);
+	signal h_sync_reg, blank_reg, completed_reg,
+	       h_sync_next, blank_next, completed_next : std_logic;
+	signal column_next, column_reg: unsigned (10 downto 0);
 	
 begin
 
@@ -58,7 +61,17 @@ begin
 	count_next <= (others => '0') when state_reg /= state_next else
 						count_reg +1;
 	
+	--output buf
 	
+	process(clk)
+	begin
+		if(rising_edge(clk)) then
+			h_sync_reg <= h_sync_next;
+			blank_reg <= blank_next;
+			column_reg <= column_next;
+			completed_reg <= completed_next;
+		end if;
+	end process;
 
 	
 			
@@ -96,25 +109,48 @@ begin
 			
 		--completed logich	
 		when Complete =>
-			if (count_reg = 0) then
 				state_next <= activeVid;
-			end if;
-		
 		end case;
 		
 	end process;
 	
-	--output logic
-		h_sync    <= '0' when state_reg = sync else
-					    '1';
-		blank     <= '0' when state_reg = activeVid else
-					    '1';
-		completed <= '1' when state_reg = complete else
-						 '0';
-		
-		column    <=  count_reg when state_reg = activeVid else
-					    (others => '0');
+	--output logic C2C Good explained I needed to add an output buffer
+		process(state_next, count_next)
+	begin
+		case state_next is
+			when sync =>
+				h_sync_next <= '0';
+				blank_next <= '1';
+				column_next <= (others => '0');
+				completed_next <= '0';
+			when backPorch =>
+				h_sync_next <= '1';
+				blank_next <= '1';
+				column_next <= (others => '0');
+				completed_next <= '0';
+			when complete =>
+				h_sync_next <= '1';
+				blank_next <= '1';
+				column_next <= (others => '0');
+				completed_next <= '1';
+			when activeVid =>
+				h_sync_next <= '1';
+				blank_next <= '0';
+				column_next <= count_next;
+				completed_next <= '0';
+			when frontPorch =>
+				h_sync_next <= '1';
+				blank_next <= '1';
+				column_next <= (others => '0');
+				completed_next <= '0';
+		end case;
+	end process;
 	
-
+	
+	h_sync <= h_sync_reg;
+	blank <= blank_reg;
+	column <= column_reg;
+	completed <= completed_reg;
+	
 end Behavioral;
 

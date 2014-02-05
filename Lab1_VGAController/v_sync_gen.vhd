@@ -42,10 +42,12 @@ architecture Behavioral of v_sync_gen is
 
 
 	--had to make my own type...
-	type states is (activeVid, frontPorch, sync, backPorch);
+	type states is (activeVid, frontPorch, sync, backPorch, complete);
 	signal state_reg, state_next : states;
 	signal count_reg, count_next : unsigned (10 downto 0);
-	signal donezoes : std_logic;
+	signal v_sync_reg, blank_reg, completed_reg,
+	       v_sync_next, blank_next, completed_next : std_logic;
+	signal row_next, row_reg: unsigned (10 downto 0);
 begin
 
 
@@ -62,73 +64,63 @@ begin
 	
 	
 	--count reg
-	process(h_completed, reset)
+	process(clk, reset)
 	begin
 		if (reset = '1') then
 			count_reg <= (others => '0');
-		elsif( rising_edge(h_completed)) then
-			if(state_reg = state_next) then
+		elsif (rising_edge(clk)) then
 				count_reg <= count_next;
-			else 
-				count_reg <= (others => '0');
-			end if;
 		end if;
 	end process;
 	
+	count_next <= (others => '0') when (h_completed = '1') and state_reg /= state_next else
+						count_reg +1;
 	
 	
-	--next count logic
-	process( state_reg, state_next, count_reg)
-	begin 
-	
-		if (state_next = state_reg) then 
-			count_next <= count_reg +1;
-		else 
-			count_next <= (others => '0');
-		end if;
-	end process;
-	
-	
-	
-	process(state_reg)
+
+	--output buffer
+	process(clk)
 	begin
+		if rising_edge(clk) then
+			v_sync_reg <= v_sync_next;
+			blank_reg <= blank_next;
+			row_reg <= row_next;
+			completed_reg <= completed_next;
+		end if;
+	end process;
+	
+	
+	
+	process(state_reg, count_reg, state_next)
+	begin
+	
+		state_reg <= state_next;
+		
 		case state_reg is
 		
-		when backPorch =>
-			if (count_reg < 33) then
-				state_next <= backPorch;
-				donezoes <= '0';
-			else 
+		
+		when complete =>
 				state_next <= activeVid;
-				donezoes <= '1';
+				
+		when backPorch =>
+			if (count_reg = 31) then
+				state_next <= complete;
 			end if;
 		
 		when sync =>
-			if (count_reg < 2) then
-				state_next <= sync;
-				donezoes <= '0';
-			else 
+			if (count_reg = 1) then
 				state_next <= backPorch;
-				donezoes <= '0';
 			end if;
 		
 		when frontPorch =>
-			if(count_reg < 10) then
-				state_next <= frontPorch;
-				donezoes <= '0';
-			else 
+			if(count_reg = 9) then
 				state_next <= sync;
-				donezoes <= '0';
 			end if;
 
 		
 		when activeVid =>
-			if(count_reg <480) then
-				state_next <= activeVid;
-				donezoes <= '0';
-			else 
+			if(count_reg =479) then
 				state_next <= frontPorch;
-				donezoes <= '0';
 			end if;
 			
 	   end case;
@@ -136,14 +128,41 @@ begin
 	end process;
 	
 	--output logic
-		v_sync <= '0' when state_reg = sync else
-					 '1';
-		blank <= '0' when state_reg = activeVid else
-					'1';
-		completed <= donezoes;
-		
-		row <=  count_reg when state_reg = activeVid else
-					(others => '0');
+	process(state_next, count_next)
+	begin
+		case state_next is
+			when sync =>
+				v_sync_next <= '0';
+				blank_next <= '1';
+				row_next <= (others => '0');
+				completed_next <= '0';
+			when backPorch =>
+				v_sync_next <= '1';
+				blank_next <= '1';
+				row_next <= (others => '0');
+				completed_next <= '0';
+			when complete =>
+				v_sync_next <= '1';
+				blank_next <= '1';
+				row_next <= (others => '0');
+				completed_next <= '1';
+			when activeVid =>
+				v_sync_next <= '1';
+				blank_next <= '0';
+				row_next <= count_next;
+				completed_next <= '0';
+			when frontPorch =>
+				v_sync_next <= '1';
+				blank_next <= '1';
+				row_next <= (others => '0');
+				completed_next <= '0';
+		end case;
+	end process;
+	--output	
+	v_sync <= v_sync_reg;
+	blank <= blank_reg;
+	row <= row_reg;
+	completed <= completed_reg;
 	
 
 end Behavioral;

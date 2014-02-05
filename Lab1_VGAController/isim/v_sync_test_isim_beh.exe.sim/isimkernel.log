@@ -1,0 +1,12 @@
+Command line:
+   v_sync_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55456
+
+Tue Feb 04 17:26:51 2014
+
+Resolution function required for the Net /v_sync_test/uut/state_reg driven by:
+/v_sync_test/uut//v_sync_gen.vhd:55
+/v_sync_test/uut//v_sync_gen.vhd:94
+
