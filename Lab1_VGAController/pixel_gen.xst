@@ -1,7 +1,7 @@
 set -tmpdir "C:/Users/C15Travis.Schriner/Documents/2dig/ECE383/Lab1_VGAController/Lab1_VGAController/xst/projnav.tmp"
 set -xsthdpdir "C:/Users/C15Travis.Schriner/Documents/2dig/ECE383/Lab1_VGAController/Lab1_VGAController/xst"
 run -compileonly yes
--p xc6slx45-3-fgg484
+-p xc6slx45-3-csg324
 -top pixel_gen
 -opt_mode Area
 -opt_level 1
