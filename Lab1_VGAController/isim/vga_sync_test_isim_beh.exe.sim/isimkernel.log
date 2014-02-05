@@ -2,9 +2,9 @@ Command line:
    vga_sync_test_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  64285
+     -socket  65145
 
-Wed Feb 05 15:20:43 2014
+Wed Feb 05 16:00:05 2014
 
 
- Elaboration Time: 0.0936 sec
+ Elaboration Time: 0.0624 sec

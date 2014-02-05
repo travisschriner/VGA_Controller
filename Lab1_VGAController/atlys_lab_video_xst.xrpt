@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Wed Feb 05 15:42:38 2014">
+  <application stringID="Xst" timeStamp="Wed Feb 05 16:12:12 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -57,7 +57,7 @@
       <item DEFAULT="" label="-ifn" stringID="XST_IFN" value="atlys_lab_video.prj"/>
       <item DEFAULT="" label="-ofn" stringID="XST_OFN" value="atlys_lab_video"/>
       <item DEFAULT="NGC" label="-ofmt" stringID="XST_OFMT" value="NGC"/>
-      <item DEFAULT="" label="-p" stringID="XST_P" value="xc6slx45-3-fgg484"/>
+      <item DEFAULT="" label="-p" stringID="XST_P" value="xc6slx45-3-csg324"/>
       <item DEFAULT="" label="-top" stringID="XST_TOP" value="atlys_lab_video"/>
       <item DEFAULT="Speed" label="-opt_mode" stringID="XST_OPTMODE" value="Area"/>
       <item DEFAULT="1" label="-opt_level" stringID="XST_OPTLEVEL" value="1"/>
@@ -218,7 +218,7 @@
       </section>
     </section>
     <section stringID="XST_DEVICE_UTILIZATION_SUMMARY">
-      <item stringID="XST_SELECTED_DEVICE" value="6slx45fgg484-3"/>
+      <item stringID="XST_SELECTED_DEVICE" value="6slx45csg324-3"/>
       <item AVAILABLE="54576" dataType="int" label="Number of Slice Registers" stringID="XST_NUMBER_OF_SLICE_REGISTERS" value="104"/>
       <item AVAILABLE="27288" dataType="int" label="Number of Slice LUTs" stringID="XST_NUMBER_OF_SLICE_LUTS" value="110"/>
       <item AVAILABLE="27288" dataType="int" label="Number used as Logic" stringID="XST_NUMBER_USED_AS_LOGIC" value="109"/>
@@ -230,7 +230,7 @@
       <item AVAILABLE="126" dataType="int" label="Number of fully used LUT-FF pairs" stringID="XST_NUMBER_OF_FULLY_USED_LUTFF_PAIRS" value="88"/>
       <item dataType="int" label="Number of unique control sets" stringID="XST_NUMBER_OF_UNIQUE_CONTROL_SETS" value="5"/>
       <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="10"/>
-      <item AVAILABLE="316" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="10"/>
+      <item AVAILABLE="218" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="10"/>
       <item AVAILABLE="16" dataType="int" label="Number of BUFG/BUFGCTRLs" stringID="XST_NUMBER_OF_BUFGBUFGCTRLS" value="3"/>
     </section>
     <section stringID="XST_PARTITION_RESOURCE_SUMMARY">

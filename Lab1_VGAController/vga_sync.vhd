@@ -63,39 +63,31 @@ component v_sync_gen
      );
 end component;
 
-signal h_blank_sig, h_completed_sig, h_sync_sig, v_sync_sig, v_blank_sig, v_completed_sig : std_logic;
-signal row_sig, column_sig : unsigned (10 downto 0);
+signal h_blank_sig, h_completed_sig, v_blank_sig : std_logic;
 
 begin
 	h_sync_instance : h_sync_gen
 		port map (clk => clk, 
 					 reset => reset, 
-					 h_sync => h_sync_sig, 
+					 h_sync => h_sync, 
 					 blank => h_blank_sig, 
 					 completed => h_completed_sig, 
-					 column => column_sig);
+					 column => column);
 		
 	v_sync_instance : v_sync_gen
 		port map (clk => clk, 
 					 reset => reset, 
 					 h_blank => h_blank_sig, 
 					 h_completed => h_completed_sig, 
-					 v_sync => v_sync_sig, 
+					 v_sync => v_sync, 
 					 blank => v_blank_sig, 
-					 completed => v_completed_sig, 
-					 row => row_sig);
+					 completed => v_completed, 
+					 row => row);
 					 
 
 	
 	--output logic
 
-	 blank <= h_blank_sig or v_blank_sig;
-	 
-	 h_sync  <= h_sync_sig;
-    v_sync <= v_sync_sig;
-    v_completed <= v_completed_sig;
-    row  <= row_sig;
-    column <= column_sig;
+		blank <= h_blank_sig or v_blank_sig;
 
 end Behavioral;
-

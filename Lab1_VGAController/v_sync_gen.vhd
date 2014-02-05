@@ -101,7 +101,7 @@ begin
 		
 		--active vid logic
 		when activeVid =>
-			if(count_reg =479) then
+			if(count_reg = 479) then
 				state_next <= frontPorch;
 			end if;
 			
@@ -181,4 +181,3 @@ begin
 	completed <= completed_reg;
 	
 end Behavioral;
-

@@ -3,7 +3,7 @@ set -xsthdpdir "C:/Users/C15Travis.Schriner/Documents/2dig/ECE383/Lab1_VGAContro
 run -compileonly yes
 -p xc6slx45-3-fgg484
 -top pixel_gen
--opt_mode Speed
+-opt_mode Area
 -opt_level 1
 -power NO
 -iuc NO
@@ -30,7 +30,7 @@ run -compileonly yes
 -rom_extract Yes
 -shreg_extract YES
 -rom_style Auto
--auto_bram_packing NO
+-auto_bram_packing YES
 -resource_sharing YES
 -async_to_sync NO
 -shreg_min_size 2
@@ -44,7 +44,7 @@ run -compileonly yes
 -use_clock_enable Auto
 -use_sync_set Auto
 -use_sync_reset Auto
--iob Auto
+-iob True
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
 -ifn pixel_gen.prj

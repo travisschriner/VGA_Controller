@@ -4,7 +4,7 @@ run
 -ifn atlys_lab_video.prj
 -ofn atlys_lab_video
 -ofmt NGC
--p xc6slx45-3-fgg484
+-p xc6slx45-3-csg324
 -top atlys_lab_video
 -opt_mode Area
 -opt_level 1

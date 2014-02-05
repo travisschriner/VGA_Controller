@@ -27,21 +27,8 @@ architecture Behavioral of pixel_gen is
 signal r_sig, g_sig, b_sig : std_logic_vector(7 downto 0);
 
 begin
-	process(blank)
-	begin
-		if blank = '0' then r_sig <= (others => '1'); 
-								  g_sig <= (others => '0');
-								  b_sig <= (others => '0');
-		else r_sig <= (others => '0');
-			  g_sig <= (others => '0');
-			  b_sig <= (others => '0');
-		end if;
-	end process;
-
---output logic
-	r <= r_sig;
-	g <= g_sig;
-	b <= b_sig;
-
+	r <= (others => '0') when blank = '1' else (others => '1');
+	g <= (others => '0');
+	b <= (others => '0');
 end Behavioral;
 

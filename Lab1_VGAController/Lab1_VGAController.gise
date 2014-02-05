@@ -141,6 +141,7 @@
     <transform xil_pn:end_ts="1391537710" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="7619469927417452607" xil_pn:start_ts="1391537710">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1391637468" xil_pn:in_ck="617879941964418457" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1391637468">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -197,6 +198,7 @@
     <transform xil_pn:end_ts="1391536323" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="7619469927417452607" xil_pn:start_ts="1391536323">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1391536323" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1391536323">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -209,15 +211,21 @@
     <transform xil_pn:end_ts="1391536323" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8977612015859450356" xil_pn:start_ts="1391536323">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1391536323" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="3896788477598317065" xil_pn:start_ts="1391536323">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1391640188" xil_pn:in_ck="8976952964806958332" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="266232638336713645" xil_pn:start_ts="1391640155">
+    <transform xil_pn:end_ts="1391641761" xil_pn:in_ck="8976952964806958332" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="266232638336713645" xil_pn:start_ts="1391641749">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -235,19 +243,35 @@
     <transform xil_pn:end_ts="1391536337" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-46420871015216857" xil_pn:start_ts="1391536337">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1391640195" xil_pn:in_ck="4047288687453449399" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6882376497399365258" xil_pn:start_ts="1391640188">
+    <transform xil_pn:end_ts="1391641768" xil_pn:in_ck="4047288687453449399" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6882376497399365258" xil_pn:start_ts="1391641761">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="atlys_lab_video.bld"/>
       <outfile xil_pn:name="atlys_lab_video.ngd"/>
       <outfile xil_pn:name="atlys_lab_video_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1391640212" xil_pn:in_ck="4047288687453449400" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-7482935948421254141" xil_pn:start_ts="1391640195">
+    <transform xil_pn:end_ts="1391641784" xil_pn:in_ck="4047288687453449400" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-7482935948421254141" xil_pn:start_ts="1391641768">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="atlys_lab_video.pcf"/>
       <outfile xil_pn:name="atlys_lab_video_map.map"/>
@@ -258,9 +282,13 @@
       <outfile xil_pn:name="atlys_lab_video_summary.xml"/>
       <outfile xil_pn:name="atlys_lab_video_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1391640233" xil_pn:in_ck="-4373487361532946479" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1391640212">
+    <transform xil_pn:end_ts="1391641805" xil_pn:in_ck="-4373487361532946479" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1391641784">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="atlys_lab_video.ncd"/>
       <outfile xil_pn:name="atlys_lab_video.pad"/>
@@ -272,9 +300,10 @@
       <outfile xil_pn:name="atlys_lab_video_pad.txt"/>
       <outfile xil_pn:name="atlys_lab_video_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1391640251" xil_pn:in_ck="4047288687453449268" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1391640233">
+    <transform xil_pn:end_ts="1391641822" xil_pn:in_ck="4047288687453449268" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1391641805">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="atlys_lab_video.bgn"/>
       <outfile xil_pn:name="atlys_lab_video.bit"/>
@@ -284,9 +313,13 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1391640233" xil_pn:in_ck="4047288687453449268" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1391640225">
+    <transform xil_pn:end_ts="1391641805" xil_pn:in_ck="4047288687453449268" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1391641798">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="atlys_lab_video.twr"/>
       <outfile xil_pn:name="atlys_lab_video.twx"/>

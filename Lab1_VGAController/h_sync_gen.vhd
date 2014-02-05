@@ -154,4 +154,3 @@ begin
 	completed <= completed_reg;
 	
 end Behavioral;
-
