@@ -113,6 +113,10 @@
     <transform xil_pn:end_ts="1391560692" xil_pn:in_ck="6987805147841049040" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1391560692">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TDMS_encoder.vhd"/>
       <outfile xil_pn:name="atlys_lab_video.vhd"/>
       <outfile xil_pn:name="dvid.vhd"/>
@@ -139,6 +143,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
@@ -205,8 +210,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1391560536" xil_pn:in_ck="8976952964806958332" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="266232638336713645" xil_pn:start_ts="1391560528">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1391634937" xil_pn:in_ck="8976952964806958332" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="266232638336713645" xil_pn:start_ts="1391634924">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
@@ -215,6 +221,7 @@
       <outfile xil_pn:name="atlys_lab_video.ngc"/>
       <outfile xil_pn:name="atlys_lab_video.ngr"/>
       <outfile xil_pn:name="atlys_lab_video.prj"/>
+      <outfile xil_pn:name="atlys_lab_video.stx"/>
       <outfile xil_pn:name="atlys_lab_video.syr"/>
       <outfile xil_pn:name="atlys_lab_video.xst"/>
       <outfile xil_pn:name="atlys_lab_video_xst.xrpt"/>
@@ -225,7 +232,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1391537317" xil_pn:in_ck="4047288687453449399" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6882376497399365258" xil_pn:start_ts="1391537310">
+    <transform xil_pn:end_ts="1391634947" xil_pn:in_ck="4047288687453449399" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6882376497399365258" xil_pn:start_ts="1391634937">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -234,7 +241,7 @@
       <outfile xil_pn:name="atlys_lab_video.ngd"/>
       <outfile xil_pn:name="atlys_lab_video_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1391560933" xil_pn:in_ck="4047288687453449400" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-7482935948421254141" xil_pn:start_ts="1391560908">
+    <transform xil_pn:end_ts="1391634964" xil_pn:in_ck="4047288687453449400" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-7482935948421254141" xil_pn:start_ts="1391634947">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -247,7 +254,7 @@
       <outfile xil_pn:name="atlys_lab_video_summary.xml"/>
       <outfile xil_pn:name="atlys_lab_video_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1391560958" xil_pn:in_ck="-4373487361532946479" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1391560933">
+    <transform xil_pn:end_ts="1391634985" xil_pn:in_ck="-4373487361532946479" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1391634964">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
@@ -261,9 +268,8 @@
       <outfile xil_pn:name="atlys_lab_video_pad.txt"/>
       <outfile xil_pn:name="atlys_lab_video_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1391560981" xil_pn:in_ck="4047288687453449268" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1391560958">
+    <transform xil_pn:end_ts="1391635004" xil_pn:in_ck="4047288687453449268" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1391634985">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="atlys_lab_video.bgn"/>
@@ -274,7 +280,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1391560958" xil_pn:in_ck="4047288687453449268" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1391560951">
+    <transform xil_pn:end_ts="1391634985" xil_pn:in_ck="4047288687453449268" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1391634978">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

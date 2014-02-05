@@ -1,7 +1,7 @@
 Release 14.1 - par P.15xf (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Tue Feb 04 17:42:29 2014
+Wed Feb 05 14:16:17 2014
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -25,10 +25,10 @@ Pinout by Pin Number:
 |A3        |           |IOBM     |IO_L1P_HSWAPEN_0             |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A4        |           |IOBS     |IO_L1N_VREF_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A5        |tmdsb<1>   |IOBS     |IO_L2N_0                     |         |LVDS_25    |0             |          |         |           |         |         |          |NO         |                |
-|A6        |tmdsb<3>   |IOBS     |IO_L4N_0                     |         |LVDS_25    |0             |          |         |           |         |         |          |NO         |                |
+|A6        |tmdsb<2>   |IOBS     |IO_L4N_0                     |         |LVDS_25    |0             |          |         |           |         |         |          |NO         |                |
 |A7        |           |IOBS     |IO_L5N_0                     |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
-|A8        |           |IOBS     |IO_L6N_0                     |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
-|A9        |tmdsb<2>   |IOBS     |IO_L8N_VREF_0                |         |LVDS_25    |0             |          |         |           |         |         |          |NO         |                |
+|A8        |tmdsb<3>   |IOBS     |IO_L6N_0                     |         |LVDS_25    |0             |          |         |           |         |         |          |NO         |                |
+|A9        |           |IOBS     |IO_L8N_VREF_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A10       |           |IOBS     |IO_L34N_GCLK18_0             |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A11       |           |IOBS     |IO_L35N_GCLK16_0             |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A12       |           |IOBS     |IO_L37N_GCLK12_0             |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
@@ -91,9 +91,9 @@ Pinout by Pin Number:
 |B3        |           |IOBS     |IO_L83N_VREF_3               |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |B4        |           |         |VCCO_0                       |         |           |0             |          |         |           |         |2.50     |          |           |                |
 |B5        |           |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
-|B6        |tmds<3>    |IOBM     |IO_L4P_0                     |OUTPUT   |LVDS_25    |0             |          |         |           |         |         |UNLOCATED |YES        |NONE            |
+|B6        |tmds<2>    |IOBM     |IO_L4P_0                     |OUTPUT   |LVDS_25    |0             |          |         |           |         |         |UNLOCATED |YES        |NONE            |
 |B7        |           |         |VCCO_0                       |         |           |0             |          |         |           |         |2.50     |          |           |                |
-|B8        |reset      |IOB      |IO_L6P_0                     |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|B8        |tmds<3>    |IOBM     |IO_L6P_0                     |OUTPUT   |LVDS_25    |0             |          |         |           |         |         |UNLOCATED |YES        |NONE            |
 |B9        |           |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |B10       |           |IOBM     |IO_L34P_GCLK19_0             |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |B11       |           |         |VCCO_0                       |         |           |0             |          |         |           |         |2.50     |          |           |                |
@@ -116,7 +116,7 @@ Pinout by Pin Number:
 |C6        |           |IOBS     |IO_L3N_0                     |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |C7        |           |IOBM     |IO_L5P_0                     |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |C8        |tmdsb<0>   |IOBS     |IO_L7N_0                     |         |LVDS_25    |0             |          |         |           |         |         |          |NO         |                |
-|C9        |tmds<2>    |IOBM     |IO_L8P_0                     |OUTPUT   |LVDS_25    |0             |          |         |           |         |         |UNLOCATED |YES        |NONE            |
+|C9        |reset      |IOB      |IO_L8P_0                     |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
 |C10       |           |IOBS     |IO_L33N_0                    |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |C11       |           |IOBM     |IO_L35P_GCLK17_0             |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |C12       |           |IOBS     |IO_L36N_GCLK14_0             |UNUSED   |           |0             |          |         |           |         |         |          |           |                |

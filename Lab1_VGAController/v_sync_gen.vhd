@@ -40,14 +40,14 @@ end v_sync_gen;
 
 architecture Behavioral of v_sync_gen is
 
-
 	--had to make my own type...
-	type states is (activeVid, frontPorch, sync, backPorch, complete);
+	type states is (activeVid, frontPorch, sync, backPorch, Complete);
 	signal state_reg, state_next : states;
 	signal count_reg, count_next : unsigned (10 downto 0);
 	signal v_sync_reg, blank_reg, completed_reg,
 	       v_sync_next, blank_next, completed_next : std_logic;
-	signal row_next, row_reg: unsigned (10 downto 0);
+	signal column_next, column_reg: unsigned (10 downto 0);
+	
 begin
 
 
@@ -68,102 +68,103 @@ begin
 	begin
 		if (reset = '1') then
 			count_reg <= (others => '0');
-		elsif (rising_edge(clk)) then
-				count_reg <= count_next;
+		elsif( rising_edge(clk)) then
+			count_reg <= count_next;
 		end if;
 	end process;
 	
-	count_next <= (others => '0') when (h_completed = '1') and state_reg /= state_next else
+	count_next <= (others => '0') when state_reg /= state_next else
 						count_reg +1;
 	
+	--output buf
 	
-
-	--output buffer
 	process(clk)
 	begin
-		if rising_edge(clk) then
+		if(rising_edge(clk)) then
 			v_sync_reg <= v_sync_next;
 			blank_reg <= blank_next;
-			row_reg <= row_next;
+			column_reg <= column_next;
 			completed_reg <= completed_next;
 		end if;
 	end process;
+
 	
-	
-	
-	process(state_reg, count_reg, state_next)
+			
+			
+	process(state_reg, count_reg)
 	begin
-	
-		state_reg <= state_next;
+		state_next <= state_reg;
 		
 		case state_reg is
 		
-		
-		when complete =>
-				state_next <= activeVid;
-				
-		when backPorch =>
-			if (count_reg = 31) then
-				state_next <= complete;
-			end if;
-		
-		when sync =>
-			if (count_reg = 1) then
-				state_next <= backPorch;
-			end if;
-		
-		when frontPorch =>
-			if(count_reg = 9) then
-				state_next <= sync;
-			end if;
-
-		
+		--active vid logic
 		when activeVid =>
 			if(count_reg =479) then
 				state_next <= frontPorch;
 			end if;
 			
-	   end case;
+		--frontPorch logic	
+		when frontPorch =>
+			if(count_reg = 9) then
+				state_next <= sync;
+			end if;
+			
+		--sync logic	
+		when sync =>
+			if (count_reg = 1) then
+				state_next <= backPorch;
+			end if;
+			
+		--backporch logich	
+		when backPorch =>
+			if (count_reg = 31) then
+				state_next <= Complete;
+			end if;
+			
+		--completed logich	
+		when Complete =>
+				state_next <= activeVid;
+		end case;
 		
 	end process;
 	
-	--output logic
-	process(state_next, count_next)
+	--output logic C2C Good explained I needed to add an output buffer
+		process(state_next, count_next)
 	begin
 		case state_next is
 			when sync =>
 				v_sync_next <= '0';
 				blank_next <= '1';
-				row_next <= (others => '0');
+				column_next <= (others => '0');
 				completed_next <= '0';
 			when backPorch =>
 				v_sync_next <= '1';
 				blank_next <= '1';
-				row_next <= (others => '0');
+				column_next <= (others => '0');
 				completed_next <= '0';
 			when complete =>
 				v_sync_next <= '1';
 				blank_next <= '1';
-				row_next <= (others => '0');
+				column_next <= (others => '0');
 				completed_next <= '1';
 			when activeVid =>
 				v_sync_next <= '1';
 				blank_next <= '0';
-				row_next <= count_next;
+				column_next <= count_next;
 				completed_next <= '0';
 			when frontPorch =>
 				v_sync_next <= '1';
 				blank_next <= '1';
-				row_next <= (others => '0');
+				column_next <= (others => '0');
 				completed_next <= '0';
 		end case;
 	end process;
-	--output	
+	
+	
 	v_sync <= v_sync_reg;
 	blank <= blank_reg;
-	row <= row_reg;
+	row <= column_reg;
 	completed <= completed_reg;
 	
-
 end Behavioral;
 
