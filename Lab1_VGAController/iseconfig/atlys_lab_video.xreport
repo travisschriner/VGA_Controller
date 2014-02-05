@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-02-04T10:03:25</DateModified>
+  <DateModified>2014-02-05T14:51:44</DateModified>
   <ModuleName>atlys_lab_video</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/C15Travis.Schriner/Documents/2dig/ECE383/Lab1_VGAController/Lab1_VGAController/iseconfig/atlys_lab_video.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/C15Travis.Schriner/Documents/2dig/ECE383/Lab1_VGAController/Lab1_VGAController</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/C15Travis.Schriner/Documents/2dig/ECE383/Lab1_VGAController/Lab1_VGAController\</ImplementationReportsDirectory>
   <DateInitialized>2014-02-04T10:03:24</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
