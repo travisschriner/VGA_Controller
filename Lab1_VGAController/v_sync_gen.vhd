@@ -74,7 +74,8 @@ begin
 	end process;
 	
 	count_next <= (others => '0') when state_reg /= state_next else
-						count_reg +1;
+						count_reg +1 when h_completed = '1' else
+						count_reg;
 	
 	--output buf
 	

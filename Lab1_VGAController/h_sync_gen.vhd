@@ -103,7 +103,7 @@ begin
 			
 		--backporch logich	
 		when backPorch =>
-			if (count_reg = 31) then
+			if (count_reg = 46) then
 				state_next <= Complete;
 			end if;
 			
@@ -111,6 +111,7 @@ begin
 		when Complete =>
 				state_next <= activeVid;
 		end case;
+		
 		
 	end process;
 	

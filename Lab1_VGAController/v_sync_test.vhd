@@ -67,43 +67,37 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-      	--reset
-      wait for clk_period;
+      -- hold reset state for 100 ns.
+      wait for 100 ns;	
+		
 		reset <= '1';
 		wait for clk_period;
+		assert ((row = to_unsigned(0,11)) and (blank = '0') and (v_sync = '1') and (completed = '0'))
+		report "reset broke";
+
 		reset <= '0';
-		wait for clk_period;
+		wait for clk_period*480;
+		assert ((row = to_unsigned(300,11)) and (blank = '0') and (v_sync = '1') and (completed = '0'))
+		report "active at 300 broke";
 
+		wait for clk_period*10;
+		assert ((row = to_unsigned(0,11)) and (blank = '1') and (v_sync = '1') and (completed = '0'))
+		report "front porch broke";
 
-
-		--test sync
-		assert v_sync = '0' report "sync v_sync incorrect" severity error;
-		assert blank = '1' report "sync blank incorrect" severity error;
-		assert completed = '0' report "sync completed incorrect" severity error;
-		assert row = "00000000000" report "sync row incorrect" severity error;
-
-
-      --check for h_completed first appearance
-		wait for clk_period*142;
-		assert h_completed = '1' report "h_completed 1 failed" severity error;
-
-		--this means that the counter has incremented by one
-		--wait for another h_completed cycle
-		--an h_completed cycle is equivalent to active video + front porch +
-		--sync + back porch = 800 clock cycles.
-		wait for clk_period*800;
-		assert h_completed = '1' report "h_completed 2 failed" severity error;
-		--this assert should return true after 800 cycles, but instead it returns true
-		--at 804, not sure what's going on.
-
-		--test Back Porch
 		wait for clk_period*2;
-		assert v_sync = '1' report "Back porch v_sync incorrect" severity error;
-		assert blank = '1' report "Back porch blank incorrect" severity error;
-		assert completed = '0' report "Back porch completed incorrect" severity error;
-		assert row = "00000000000" report "Back porch row incorrect" severity error;
+		assert ((row = to_unsigned(0,11)) and (blank = '1') and (v_sync = '0') and (completed = '0'))
+		report "sync pulse broke";
 
+		wait for clk_period*33;
+		assert ((row = to_unsigned(0,11)) and (blank = '1') and (v_sync = '1') and (completed = '0'))
+		report "back porch broke";
 
+		wait for clk_period*48;
+		assert ((row = to_unsigned(0,11)) and (blank = '1') and (v_sync = '1') and (completed = '1'))
+		report "completed signal broke";
+
+     
+	   wait for clk_period*48;
       wait;
    end process;
 
