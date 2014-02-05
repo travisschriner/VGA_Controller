@@ -72,348 +72,108 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  372 paths analyzed, 102 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.841ns.
+ Minimum period is   4.857ns.
 --------------------------------------------------------------------------------
 
-Paths for end point inst_dvid/shift_green_4 (SLICE_X13Y108.C4), 10 paths
+Paths for end point inst_dvid/shift_red_2 (SLICE_X23Y107.B3), 1 path
 --------------------------------------------------------------------------------
-Slack (setup path):     3.159ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               inst_dvid/shift_clock_0 (FF)
-  Destination:          inst_dvid/shift_green_4 (FF)
+Slack (setup path):     3.143ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               inst_dvid/latched_red_6 (FF)
+  Destination:          inst_dvid/shift_red_2 (FF)
   Requirement:          8.000ns
-  Data Path Delay:      4.610ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.239 - 0.255)
-  Source Clock:         serialize_clk_BUFG rising at 0.000ns
+  Data Path Delay:      3.315ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.537ns (3.410 - 3.947)
+  Source Clock:         pixel_clk_BUFG rising at 0.000ns
   Destination Clock:    serialize_clk_BUFG rising at 8.000ns
-  Clock Uncertainty:    0.215ns
+  Clock Uncertainty:    1.005ns
 
-  Clock Uncertainty:          0.215ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+  Clock Uncertainty:          1.005ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter (TSJ):  0.070ns
     Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.360ns
-    Phase Error (PE):           0.000ns
+    Discrete Jitter (DJ):       1.062ns
+    Phase Error (PE):           0.438ns
 
-  Maximum Data Path at Slow Process Corner: inst_dvid/shift_clock_0 to inst_dvid/shift_green_4
+  Maximum Data Path at Slow Process Corner: inst_dvid/latched_red_6 to inst_dvid/shift_red_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X22Y109.AQ     Tcko                  0.447   inst_dvid/shift_clock<3>
-                                                       inst_dvid/shift_clock_0
-    SLICE_X22Y109.A4     net (fanout=2)        0.729   inst_dvid/shift_clock<0>
-    SLICE_X22Y109.A      Tilo                  0.203   inst_dvid/shift_clock<3>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>_SW0
-    SLICE_X22Y107.A6     net (fanout=1)        0.308   N6
-    SLICE_X22Y107.A      Tilo                  0.203   inst_dvid/shift_red<4>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>
-    SLICE_X13Y108.C4     net (fanout=15)       2.398   inst_dvid/GND_20_o_shift_clock[9]_equal_5_o
-    SLICE_X13Y108.CLK    Tas                   0.322   inst_dvid/shift_green<5>
-                                                       inst_dvid/Mmux_GND_20_o_latched_green[9]_mux_6_OUT51
-                                                       inst_dvid/shift_green_4
+    SLICE_X26Y107.AQ     Tcko                  0.447   inst_dvid/latched_red<9>
+                                                       inst_dvid/latched_red_6
+    SLICE_X23Y107.B3     net (fanout=2)        2.641   inst_dvid/latched_red<6>
+    SLICE_X23Y107.CLK    Tas                   0.227   inst_dvid/shift_red<4>
+                                                       inst_dvid/Mmux_GND_44_o_latched_red[9]_mux_5_OUT31
+                                                       inst_dvid/shift_red_2
     -------------------------------------------------  ---------------------------
-    Total                                      4.610ns (1.175ns logic, 3.435ns route)
-                                                       (25.5% logic, 74.5% route)
+    Total                                      3.315ns (0.674ns logic, 2.641ns route)
+                                                       (20.3% logic, 79.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     3.340ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               inst_dvid/shift_clock_8 (FF)
-  Destination:          inst_dvid/shift_green_4 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      4.429ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.239 - 0.255)
-  Source Clock:         serialize_clk_BUFG rising at 0.000ns
-  Destination Clock:    serialize_clk_BUFG rising at 8.000ns
-  Clock Uncertainty:    0.215ns
 
-  Clock Uncertainty:          0.215ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+Paths for end point inst_dvid/shift_red_4 (SLICE_X23Y107.D4), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     3.231ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               inst_dvid/latched_red_6 (FF)
+  Destination:          inst_dvid/shift_red_4 (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      3.227ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.537ns (3.410 - 3.947)
+  Source Clock:         pixel_clk_BUFG rising at 0.000ns
+  Destination Clock:    serialize_clk_BUFG rising at 8.000ns
+  Clock Uncertainty:    1.005ns
+
+  Clock Uncertainty:          1.005ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter (TSJ):  0.070ns
     Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.360ns
-    Phase Error (PE):           0.000ns
+    Discrete Jitter (DJ):       1.062ns
+    Phase Error (PE):           0.438ns
 
-  Maximum Data Path at Slow Process Corner: inst_dvid/shift_clock_8 to inst_dvid/shift_green_4
+  Maximum Data Path at Slow Process Corner: inst_dvid/latched_red_6 to inst_dvid/shift_red_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X22Y109.AMUX   Tshcko                0.488   inst_dvid/shift_clock<3>
-                                                       inst_dvid/shift_clock_8
-    SLICE_X22Y109.A1     net (fanout=2)        0.507   inst_dvid/shift_clock<8>
-    SLICE_X22Y109.A      Tilo                  0.203   inst_dvid/shift_clock<3>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>_SW0
-    SLICE_X22Y107.A6     net (fanout=1)        0.308   N6
-    SLICE_X22Y107.A      Tilo                  0.203   inst_dvid/shift_red<4>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>
-    SLICE_X13Y108.C4     net (fanout=15)       2.398   inst_dvid/GND_20_o_shift_clock[9]_equal_5_o
-    SLICE_X13Y108.CLK    Tas                   0.322   inst_dvid/shift_green<5>
-                                                       inst_dvid/Mmux_GND_20_o_latched_green[9]_mux_6_OUT51
-                                                       inst_dvid/shift_green_4
+    SLICE_X26Y107.AQ     Tcko                  0.447   inst_dvid/latched_red<9>
+                                                       inst_dvid/latched_red_6
+    SLICE_X23Y107.D4     net (fanout=2)        2.458   inst_dvid/latched_red<6>
+    SLICE_X23Y107.CLK    Tas                   0.322   inst_dvid/shift_red<4>
+                                                       inst_dvid/Mmux_GND_44_o_latched_red[9]_mux_5_OUT51
+                                                       inst_dvid/shift_red_4
     -------------------------------------------------  ---------------------------
-    Total                                      4.429ns (1.216ns logic, 3.213ns route)
-                                                       (27.5% logic, 72.5% route)
+    Total                                      3.227ns (0.769ns logic, 2.458ns route)
+                                                       (23.8% logic, 76.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     3.444ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               inst_dvid/shift_clock_1 (FF)
-  Destination:          inst_dvid/shift_green_4 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      4.325ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.239 - 0.255)
-  Source Clock:         serialize_clk_BUFG rising at 0.000ns
-  Destination Clock:    serialize_clk_BUFG rising at 8.000ns
-  Clock Uncertainty:    0.215ns
 
-  Clock Uncertainty:          0.215ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+Paths for end point inst_dvid/shift_red_6 (SLICE_X23Y107.D4), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     3.326ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               inst_dvid/latched_red_6 (FF)
+  Destination:          inst_dvid/shift_red_6 (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      3.132ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.537ns (3.410 - 3.947)
+  Source Clock:         pixel_clk_BUFG rising at 0.000ns
+  Destination Clock:    serialize_clk_BUFG rising at 8.000ns
+  Clock Uncertainty:    1.005ns
+
+  Clock Uncertainty:          1.005ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter (TSJ):  0.070ns
     Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.360ns
-    Phase Error (PE):           0.000ns
+    Discrete Jitter (DJ):       1.062ns
+    Phase Error (PE):           0.438ns
 
-  Maximum Data Path at Slow Process Corner: inst_dvid/shift_clock_1 to inst_dvid/shift_green_4
+  Maximum Data Path at Slow Process Corner: inst_dvid/latched_red_6 to inst_dvid/shift_red_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X22Y109.BQ     Tcko                  0.447   inst_dvid/shift_clock<3>
-                                                       inst_dvid/shift_clock_1
-    SLICE_X22Y109.A2     net (fanout=3)        0.444   inst_dvid/shift_clock<1>
-    SLICE_X22Y109.A      Tilo                  0.203   inst_dvid/shift_clock<3>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>_SW0
-    SLICE_X22Y107.A6     net (fanout=1)        0.308   N6
-    SLICE_X22Y107.A      Tilo                  0.203   inst_dvid/shift_red<4>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>
-    SLICE_X13Y108.C4     net (fanout=15)       2.398   inst_dvid/GND_20_o_shift_clock[9]_equal_5_o
-    SLICE_X13Y108.CLK    Tas                   0.322   inst_dvid/shift_green<5>
-                                                       inst_dvid/Mmux_GND_20_o_latched_green[9]_mux_6_OUT51
-                                                       inst_dvid/shift_green_4
+    SLICE_X26Y107.AQ     Tcko                  0.447   inst_dvid/latched_red<9>
+                                                       inst_dvid/latched_red_6
+    SLICE_X23Y107.D4     net (fanout=2)        2.458   inst_dvid/latched_red<6>
+    SLICE_X23Y107.CLK    Tas                   0.227   inst_dvid/shift_red<4>
+                                                       inst_dvid/Mmux_GND_44_o_latched_red[9]_mux_5_OUT71
+                                                       inst_dvid/shift_red_6
     -------------------------------------------------  ---------------------------
-    Total                                      4.325ns (1.175ns logic, 3.150ns route)
-                                                       (27.2% logic, 72.8% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point inst_dvid/shift_green_5 (SLICE_X13Y108.D4), 10 paths
---------------------------------------------------------------------------------
-Slack (setup path):     3.219ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               inst_dvid/shift_clock_0 (FF)
-  Destination:          inst_dvid/shift_green_5 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      4.550ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.239 - 0.255)
-  Source Clock:         serialize_clk_BUFG rising at 0.000ns
-  Destination Clock:    serialize_clk_BUFG rising at 8.000ns
-  Clock Uncertainty:    0.215ns
-
-  Clock Uncertainty:          0.215ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.360ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: inst_dvid/shift_clock_0 to inst_dvid/shift_green_5
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X22Y109.AQ     Tcko                  0.447   inst_dvid/shift_clock<3>
-                                                       inst_dvid/shift_clock_0
-    SLICE_X22Y109.A4     net (fanout=2)        0.729   inst_dvid/shift_clock<0>
-    SLICE_X22Y109.A      Tilo                  0.203   inst_dvid/shift_clock<3>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>_SW0
-    SLICE_X22Y107.A6     net (fanout=1)        0.308   N6
-    SLICE_X22Y107.A      Tilo                  0.203   inst_dvid/shift_red<4>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>
-    SLICE_X13Y108.D4     net (fanout=15)       2.338   inst_dvid/GND_20_o_shift_clock[9]_equal_5_o
-    SLICE_X13Y108.CLK    Tas                   0.322   inst_dvid/shift_green<5>
-                                                       inst_dvid/Mmux_GND_20_o_latched_green[9]_mux_6_OUT61
-                                                       inst_dvid/shift_green_5
-    -------------------------------------------------  ---------------------------
-    Total                                      4.550ns (1.175ns logic, 3.375ns route)
-                                                       (25.8% logic, 74.2% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     3.400ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               inst_dvid/shift_clock_8 (FF)
-  Destination:          inst_dvid/shift_green_5 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      4.369ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.239 - 0.255)
-  Source Clock:         serialize_clk_BUFG rising at 0.000ns
-  Destination Clock:    serialize_clk_BUFG rising at 8.000ns
-  Clock Uncertainty:    0.215ns
-
-  Clock Uncertainty:          0.215ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.360ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: inst_dvid/shift_clock_8 to inst_dvid/shift_green_5
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X22Y109.AMUX   Tshcko                0.488   inst_dvid/shift_clock<3>
-                                                       inst_dvid/shift_clock_8
-    SLICE_X22Y109.A1     net (fanout=2)        0.507   inst_dvid/shift_clock<8>
-    SLICE_X22Y109.A      Tilo                  0.203   inst_dvid/shift_clock<3>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>_SW0
-    SLICE_X22Y107.A6     net (fanout=1)        0.308   N6
-    SLICE_X22Y107.A      Tilo                  0.203   inst_dvid/shift_red<4>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>
-    SLICE_X13Y108.D4     net (fanout=15)       2.338   inst_dvid/GND_20_o_shift_clock[9]_equal_5_o
-    SLICE_X13Y108.CLK    Tas                   0.322   inst_dvid/shift_green<5>
-                                                       inst_dvid/Mmux_GND_20_o_latched_green[9]_mux_6_OUT61
-                                                       inst_dvid/shift_green_5
-    -------------------------------------------------  ---------------------------
-    Total                                      4.369ns (1.216ns logic, 3.153ns route)
-                                                       (27.8% logic, 72.2% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     3.504ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               inst_dvid/shift_clock_1 (FF)
-  Destination:          inst_dvid/shift_green_5 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      4.265ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.239 - 0.255)
-  Source Clock:         serialize_clk_BUFG rising at 0.000ns
-  Destination Clock:    serialize_clk_BUFG rising at 8.000ns
-  Clock Uncertainty:    0.215ns
-
-  Clock Uncertainty:          0.215ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.360ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: inst_dvid/shift_clock_1 to inst_dvid/shift_green_5
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X22Y109.BQ     Tcko                  0.447   inst_dvid/shift_clock<3>
-                                                       inst_dvid/shift_clock_1
-    SLICE_X22Y109.A2     net (fanout=3)        0.444   inst_dvid/shift_clock<1>
-    SLICE_X22Y109.A      Tilo                  0.203   inst_dvid/shift_clock<3>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>_SW0
-    SLICE_X22Y107.A6     net (fanout=1)        0.308   N6
-    SLICE_X22Y107.A      Tilo                  0.203   inst_dvid/shift_red<4>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>
-    SLICE_X13Y108.D4     net (fanout=15)       2.338   inst_dvid/GND_20_o_shift_clock[9]_equal_5_o
-    SLICE_X13Y108.CLK    Tas                   0.322   inst_dvid/shift_green<5>
-                                                       inst_dvid/Mmux_GND_20_o_latched_green[9]_mux_6_OUT61
-                                                       inst_dvid/shift_green_5
-    -------------------------------------------------  ---------------------------
-    Total                                      4.265ns (1.175ns logic, 3.090ns route)
-                                                       (27.5% logic, 72.5% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point inst_dvid/shift_green_6 (SLICE_X13Y108.C4), 10 paths
---------------------------------------------------------------------------------
-Slack (setup path):     3.254ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               inst_dvid/shift_clock_0 (FF)
-  Destination:          inst_dvid/shift_green_6 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      4.515ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.239 - 0.255)
-  Source Clock:         serialize_clk_BUFG rising at 0.000ns
-  Destination Clock:    serialize_clk_BUFG rising at 8.000ns
-  Clock Uncertainty:    0.215ns
-
-  Clock Uncertainty:          0.215ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.360ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: inst_dvid/shift_clock_0 to inst_dvid/shift_green_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X22Y109.AQ     Tcko                  0.447   inst_dvid/shift_clock<3>
-                                                       inst_dvid/shift_clock_0
-    SLICE_X22Y109.A4     net (fanout=2)        0.729   inst_dvid/shift_clock<0>
-    SLICE_X22Y109.A      Tilo                  0.203   inst_dvid/shift_clock<3>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>_SW0
-    SLICE_X22Y107.A6     net (fanout=1)        0.308   N6
-    SLICE_X22Y107.A      Tilo                  0.203   inst_dvid/shift_red<4>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>
-    SLICE_X13Y108.C4     net (fanout=15)       2.398   inst_dvid/GND_20_o_shift_clock[9]_equal_5_o
-    SLICE_X13Y108.CLK    Tas                   0.227   inst_dvid/shift_green<5>
-                                                       inst_dvid/Mmux_GND_20_o_latched_green[9]_mux_6_OUT71
-                                                       inst_dvid/shift_green_6
-    -------------------------------------------------  ---------------------------
-    Total                                      4.515ns (1.080ns logic, 3.435ns route)
-                                                       (23.9% logic, 76.1% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     3.435ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               inst_dvid/shift_clock_8 (FF)
-  Destination:          inst_dvid/shift_green_6 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      4.334ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.239 - 0.255)
-  Source Clock:         serialize_clk_BUFG rising at 0.000ns
-  Destination Clock:    serialize_clk_BUFG rising at 8.000ns
-  Clock Uncertainty:    0.215ns
-
-  Clock Uncertainty:          0.215ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.360ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: inst_dvid/shift_clock_8 to inst_dvid/shift_green_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X22Y109.AMUX   Tshcko                0.488   inst_dvid/shift_clock<3>
-                                                       inst_dvid/shift_clock_8
-    SLICE_X22Y109.A1     net (fanout=2)        0.507   inst_dvid/shift_clock<8>
-    SLICE_X22Y109.A      Tilo                  0.203   inst_dvid/shift_clock<3>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>_SW0
-    SLICE_X22Y107.A6     net (fanout=1)        0.308   N6
-    SLICE_X22Y107.A      Tilo                  0.203   inst_dvid/shift_red<4>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>
-    SLICE_X13Y108.C4     net (fanout=15)       2.398   inst_dvid/GND_20_o_shift_clock[9]_equal_5_o
-    SLICE_X13Y108.CLK    Tas                   0.227   inst_dvid/shift_green<5>
-                                                       inst_dvid/Mmux_GND_20_o_latched_green[9]_mux_6_OUT71
-                                                       inst_dvid/shift_green_6
-    -------------------------------------------------  ---------------------------
-    Total                                      4.334ns (1.121ns logic, 3.213ns route)
-                                                       (25.9% logic, 74.1% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     3.539ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               inst_dvid/shift_clock_1 (FF)
-  Destination:          inst_dvid/shift_green_6 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      4.230ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.239 - 0.255)
-  Source Clock:         serialize_clk_BUFG rising at 0.000ns
-  Destination Clock:    serialize_clk_BUFG rising at 8.000ns
-  Clock Uncertainty:    0.215ns
-
-  Clock Uncertainty:          0.215ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.360ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: inst_dvid/shift_clock_1 to inst_dvid/shift_green_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X22Y109.BQ     Tcko                  0.447   inst_dvid/shift_clock<3>
-                                                       inst_dvid/shift_clock_1
-    SLICE_X22Y109.A2     net (fanout=3)        0.444   inst_dvid/shift_clock<1>
-    SLICE_X22Y109.A      Tilo                  0.203   inst_dvid/shift_clock<3>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>_SW0
-    SLICE_X22Y107.A6     net (fanout=1)        0.308   N6
-    SLICE_X22Y107.A      Tilo                  0.203   inst_dvid/shift_red<4>
-                                                       inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>
-    SLICE_X13Y108.C4     net (fanout=15)       2.398   inst_dvid/GND_20_o_shift_clock[9]_equal_5_o
-    SLICE_X13Y108.CLK    Tas                   0.227   inst_dvid/shift_green<5>
-                                                       inst_dvid/Mmux_GND_20_o_latched_green[9]_mux_6_OUT71
-                                                       inst_dvid/shift_green_6
-    -------------------------------------------------  ---------------------------
-    Total                                      4.230ns (1.080ns logic, 3.150ns route)
-                                                       (25.5% logic, 74.5% route)
+    Total                                      3.132ns (0.674ns logic, 2.458ns route)
+                                                       (21.5% logic, 78.5% route)
 
 --------------------------------------------------------------------------------
 
@@ -423,14 +183,14 @@ Hold Paths: PERIOD analysis for net "serialize_clk" derived from
 
 --------------------------------------------------------------------------------
 
-Paths for end point inst_dvid/shift_red_8 (SLICE_X23Y107.B5), 1 path
+Paths for end point inst_dvid/shift_green_3 (SLICE_X23Y109.B5), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.214ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               inst_dvid/latched_red_8 (FF)
-  Destination:          inst_dvid/shift_red_8 (FF)
+Slack (hold path):      0.339ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               inst_dvid/latched_green_7 (FF)
+  Destination:          inst_dvid/shift_green_3 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.301ns (Levels of Logic = 1)
-  Clock Path Skew:      0.082ns (2.276 - 2.194)
+  Data Path Delay:      1.426ns (Levels of Logic = 1)
+  Clock Path Skew:      0.082ns (2.280 - 2.198)
   Source Clock:         pixel_clk_BUFG rising at 0.000ns
   Destination Clock:    serialize_clk_BUFG rising at 0.000ns
   Clock Uncertainty:    1.005ns
@@ -441,30 +201,30 @@ Slack (hold path):      0.214ns (requirement - (clock path skew + uncertainty - 
     Discrete Jitter (DJ):       1.062ns
     Phase Error (PE):           0.438ns
 
-  Minimum Data Path at Fast Process Corner: inst_dvid/latched_red_8 to inst_dvid/shift_red_8
+  Minimum Data Path at Fast Process Corner: inst_dvid/latched_green_7 to inst_dvid/shift_green_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X22Y106.CQ     Tcko                  0.234   inst_dvid/latched_red<9>
-                                                       inst_dvid/latched_red_8
-    SLICE_X23Y107.B5     net (fanout=1)        0.852   inst_dvid/latched_red<8>
-    SLICE_X23Y107.CLK    Tah         (-Th)    -0.215   inst_dvid/shift_red<8>
-                                                       inst_dvid/Mmux_GND_20_o_latched_red[9]_mux_5_OUT91
-                                                       inst_dvid/shift_red_8
+    SLICE_X22Y108.BQ     Tcko                  0.234   inst_dvid/latched_green<9>
+                                                       inst_dvid/latched_green_7
+    SLICE_X23Y109.B5     net (fanout=3)        1.037   inst_dvid/latched_green<7>
+    SLICE_X23Y109.CLK    Tah         (-Th)    -0.155   inst_dvid/shift_green<5>
+                                                       inst_dvid/Mmux_GND_44_o_latched_green[9]_mux_6_OUT41
+                                                       inst_dvid/shift_green_3
     -------------------------------------------------  ---------------------------
-    Total                                      1.301ns (0.449ns logic, 0.852ns route)
-                                                       (34.5% logic, 65.5% route)
+    Total                                      1.426ns (0.389ns logic, 1.037ns route)
+                                                       (27.3% logic, 72.7% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point inst_dvid/shift_blue_7 (SLICE_X24Y108.D5), 1 path
+Paths for end point inst_dvid/shift_blue_7 (SLICE_X26Y109.D5), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.294ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.350ns (requirement - (clock path skew + uncertainty - data path))
   Source:               inst_dvid/latched_blue_7 (FF)
   Destination:          inst_dvid/shift_blue_7 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.385ns (Levels of Logic = 1)
-  Clock Path Skew:      0.086ns (2.277 - 2.191)
+  Data Path Delay:      1.439ns (Levels of Logic = 1)
+  Clock Path Skew:      0.084ns (2.279 - 2.195)
   Source Clock:         pixel_clk_BUFG rising at 0.000ns
   Destination Clock:    serialize_clk_BUFG rising at 0.000ns
   Clock Uncertainty:    1.005ns
@@ -479,26 +239,26 @@ Slack (hold path):      0.294ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y105.BQ     Tcko                  0.200   inst_dvid/latched_blue<9>
+    SLICE_X27Y106.BQ     Tcko                  0.198   inst_dvid/latched_blue<9>
                                                        inst_dvid/latched_blue_7
-    SLICE_X24Y108.D5     net (fanout=3)        1.064   inst_dvid/latched_blue<7>
-    SLICE_X24Y108.CLK    Tah         (-Th)    -0.121   inst_dvid/shift_blue<5>
-                                                       inst_dvid/Mmux_GND_20_o_latched_blue[9]_mux_7_OUT81
+    SLICE_X26Y109.D5     net (fanout=3)        1.110   inst_dvid/latched_blue<7>
+    SLICE_X26Y109.CLK    Tah         (-Th)    -0.131   inst_dvid/shift_blue<5>
+                                                       inst_dvid/Mmux_GND_44_o_latched_blue[9]_mux_7_OUT81
                                                        inst_dvid/shift_blue_7
     -------------------------------------------------  ---------------------------
-    Total                                      1.385ns (0.321ns logic, 1.064ns route)
-                                                       (23.2% logic, 76.8% route)
+    Total                                      1.439ns (0.329ns logic, 1.110ns route)
+                                                       (22.9% logic, 77.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point inst_dvid/shift_green_8 (SLICE_X12Y108.A3), 1 path
+Paths for end point inst_dvid/shift_blue_8 (SLICE_X27Y109.A3), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.345ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               inst_dvid/latched_green_8 (FF)
-  Destination:          inst_dvid/shift_green_8 (FF)
+Slack (hold path):      0.365ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               inst_dvid/latched_blue_8 (FF)
+  Destination:          inst_dvid/shift_blue_8 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.433ns (Levels of Logic = 1)
-  Clock Path Skew:      0.083ns (2.277 - 2.194)
+  Data Path Delay:      1.454ns (Levels of Logic = 1)
+  Clock Path Skew:      0.084ns (2.279 - 2.195)
   Source Clock:         pixel_clk_BUFG rising at 0.000ns
   Destination Clock:    serialize_clk_BUFG rising at 0.000ns
   Clock Uncertainty:    1.005ns
@@ -509,19 +269,19 @@ Slack (hold path):      0.345ns (requirement - (clock path skew + uncertainty - 
     Discrete Jitter (DJ):       1.062ns
     Phase Error (PE):           0.438ns
 
-  Minimum Data Path at Fast Process Corner: inst_dvid/latched_green_8 to inst_dvid/shift_green_8
+  Minimum Data Path at Fast Process Corner: inst_dvid/latched_blue_8 to inst_dvid/shift_blue_8
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y106.CQ     Tcko                  0.200   inst_dvid/latched_green<9>
-                                                       inst_dvid/latched_green_8
-    SLICE_X12Y108.A3     net (fanout=1)        1.043   inst_dvid/latched_green<8>
-    SLICE_X12Y108.CLK    Tah         (-Th)    -0.190   inst_dvid/shift_green<8>
-                                                       inst_dvid/Mmux_GND_20_o_latched_green[9]_mux_6_OUT91
-                                                       inst_dvid/shift_green_8
+    SLICE_X27Y106.CQ     Tcko                  0.198   inst_dvid/latched_blue<9>
+                                                       inst_dvid/latched_blue_8
+    SLICE_X27Y109.A3     net (fanout=1)        1.041   inst_dvid/latched_blue<8>
+    SLICE_X27Y109.CLK    Tah         (-Th)    -0.215   inst_dvid/shift_blue<8>
+                                                       inst_dvid/Mmux_GND_44_o_latched_blue[9]_mux_7_OUT91
+                                                       inst_dvid/shift_blue_8
     -------------------------------------------------  ---------------------------
-    Total                                      1.433ns (0.390ns logic, 1.043ns route)
-                                                       (27.2% logic, 72.8% route)
+    Total                                      1.454ns (0.413ns logic, 1.041ns route)
+                                                       (28.4% logic, 71.6% route)
 
 --------------------------------------------------------------------------------
 
@@ -602,19 +362,19 @@ Timing constraint: PERIOD analysis for net "pixel_clk" derived from  NET
 cycle corrected to HIGH 20 nS  
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 8923 paths analyzed, 402 endpoints analyzed, 0 failing endpoints
+ 7961 paths analyzed, 346 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   7.348ns.
+ Minimum period is   6.384ns.
 --------------------------------------------------------------------------------
 
-Paths for end point vga_sync_instance/v_sync_instance/column_reg_10 (SLICE_X12Y92.B2), 107 paths
+Paths for end point vga_sync_instance/v_sync_instance/column_reg_6 (SLICE_X25Y101.D2), 103 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     32.652ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vga_sync_instance/v_sync_instance/count_reg_6 (FF)
-  Destination:          vga_sync_instance/v_sync_instance/column_reg_10 (FF)
+Slack (setup path):     33.616ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga_sync_instance/v_sync_instance/count_reg_7 (FF)
+  Destination:          vga_sync_instance/v_sync_instance/column_reg_6 (FF)
   Requirement:          40.000ns
-  Data Path Delay:      6.802ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.011ns (0.151 - 0.162)
+  Data Path Delay:      5.835ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.014ns (0.235 - 0.249)
   Source Clock:         pixel_clk_BUFG rising at 0.000ns
   Destination Clock:    pixel_clk_BUFG rising at 40.000ns
   Clock Uncertainty:    0.535ns
@@ -625,89 +385,282 @@ Slack (setup path):     32.652ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       1.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_6 to vga_sync_instance/v_sync_instance/column_reg_10
+  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_7 to vga_sync_instance/v_sync_instance/column_reg_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y93.DQ      Tcko                  0.408   vga_sync_instance/v_sync_instance/count_reg<6>
-                                                       vga_sync_instance/v_sync_instance/count_reg_6
-    SLICE_X13Y99.D2      net (fanout=5)        1.015   vga_sync_instance/v_sync_instance/count_reg<6>
-    SLICE_X13Y99.DMUX    Tilo                  0.313   inst_dvid/TDMS_encoder_green/encoded<9>
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>_SW0
-    SLICE_X10Y92.B5      net (fanout=1)        0.807   N2
-    SLICE_X10Y92.B       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>
-    SLICE_X10Y92.A5      net (fanout=3)        0.233   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o
-    SLICE_X10Y92.A       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd1-In1
-    SLICE_X11Y92.A3      net (fanout=8)        1.047   vga_sync_instance/v_sync_instance/completed_next
-    SLICE_X11Y92.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
-                                                       vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
-    SLICE_X9Y93.D2       net (fanout=11)       0.837   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
-    SLICE_X9Y93.D        Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<10>
-                                                       vga_sync_instance/v_sync_instance/Mmux_count_next21
-    SLICE_X12Y92.B2      net (fanout=1)        0.877   vga_sync_instance/v_sync_instance/count_next<10>
-    SLICE_X12Y92.CLK     Tas                   0.341   vga_sync_instance/v_sync_instance/column_reg<10>
-                                                       vga_sync_instance/v_sync_instance/Mmux_column_next21
-                                                       vga_sync_instance/v_sync_instance/column_reg_10
-    -------------------------------------------------  ---------------------------
-    Total                                      6.802ns (1.986ns logic, 4.816ns route)
-                                                       (29.2% logic, 70.8% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     32.693ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vga_sync_instance/v_sync_instance/count_reg_6 (FF)
-  Destination:          vga_sync_instance/v_sync_instance/column_reg_10 (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.761ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.011ns (0.151 - 0.162)
-  Source Clock:         pixel_clk_BUFG rising at 0.000ns
-  Destination Clock:    pixel_clk_BUFG rising at 40.000ns
-  Clock Uncertainty:    0.535ns
-
-  Clock Uncertainty:          0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       1.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_6 to vga_sync_instance/v_sync_instance/column_reg_10
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X12Y93.DQ      Tcko                  0.408   vga_sync_instance/v_sync_instance/count_reg<6>
-                                                       vga_sync_instance/v_sync_instance/count_reg_6
-    SLICE_X13Y99.D2      net (fanout=5)        1.015   vga_sync_instance/v_sync_instance/count_reg<6>
-    SLICE_X13Y99.DMUX    Tilo                  0.313   inst_dvid/TDMS_encoder_green/encoded<9>
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>_SW0
-    SLICE_X10Y92.B5      net (fanout=1)        0.807   N2
-    SLICE_X10Y92.B       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>
-    SLICE_X10Y93.C4      net (fanout=3)        0.439   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o
-    SLICE_X10Y93.CMUX    Tilo                  0.361   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
-                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5_G
+    SLICE_X23Y101.AQ     Tcko                  0.391   vga_sync_instance/v_sync_instance/count_reg<10>
+                                                       vga_sync_instance/v_sync_instance/count_reg_7
+    SLICE_X25Y99.B1      net (fanout=5)        0.941   vga_sync_instance/v_sync_instance/count_reg<7>
+    SLICE_X25Y99.B       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2_SW0
+    SLICE_X25Y99.A5      net (fanout=1)        0.187   N4
+    SLICE_X25Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2
+    SLICE_X24Y99.D2      net (fanout=3)        0.623   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2
+    SLICE_X24Y99.CMUX    Topdc                 0.338   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5_F
                                                        vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5
-    SLICE_X11Y92.A1      net (fanout=8)        0.642   vga_sync_instance/v_sync_instance/state_next<0>
-    SLICE_X11Y92.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
+    SLICE_X23Y99.A1      net (fanout=8)        0.670   vga_sync_instance/v_sync_instance/state_next<0>
+    SLICE_X23Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
                                                        vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
-    SLICE_X9Y93.D2       net (fanout=11)       0.837   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
-    SLICE_X9Y93.D        Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<10>
-                                                       vga_sync_instance/v_sync_instance/Mmux_count_next21
-    SLICE_X12Y92.B2      net (fanout=1)        0.877   vga_sync_instance/v_sync_instance/count_next<10>
-    SLICE_X12Y92.CLK     Tas                   0.341   vga_sync_instance/v_sync_instance/column_reg<10>
-                                                       vga_sync_instance/v_sync_instance/Mmux_column_next21
-                                                       vga_sync_instance/v_sync_instance/column_reg_10
+    SLICE_X23Y100.D3     net (fanout=11)       0.524   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
+    SLICE_X23Y100.D      Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<6>
+                                                       vga_sync_instance/v_sync_instance/Mmux_count_next81
+    SLICE_X25Y101.D2     net (fanout=1)        0.803   vga_sync_instance/v_sync_instance/count_next<6>
+    SLICE_X25Y101.CLK    Tas                   0.322   vga_sync_instance/v_sync_instance/column_reg<6>
+                                                       vga_sync_instance/v_sync_instance/Mmux_column_next81
+                                                       vga_sync_instance/v_sync_instance/column_reg_6
     -------------------------------------------------  ---------------------------
-    Total                                      6.761ns (2.144ns logic, 4.617ns route)
-                                                       (31.7% logic, 68.3% route)
+    Total                                      5.835ns (2.087ns logic, 3.748ns route)
+                                                       (35.8% logic, 64.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     32.697ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     33.751ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga_sync_instance/v_sync_instance/count_reg_7 (FF)
+  Destination:          vga_sync_instance/v_sync_instance/column_reg_6 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      5.700ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.014ns (0.235 - 0.249)
+  Source Clock:         pixel_clk_BUFG rising at 0.000ns
+  Destination Clock:    pixel_clk_BUFG rising at 40.000ns
+  Clock Uncertainty:    0.535ns
+
+  Clock Uncertainty:          0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       1.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_7 to vga_sync_instance/v_sync_instance/column_reg_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y101.AQ     Tcko                  0.391   vga_sync_instance/v_sync_instance/count_reg<10>
+                                                       vga_sync_instance/v_sync_instance/count_reg_7
+    SLICE_X25Y99.C2      net (fanout=5)        0.948   vga_sync_instance/v_sync_instance/count_reg<7>
+    SLICE_X25Y99.C       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In1
+    SLICE_X24Y99.B6      net (fanout=1)        0.279   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In
+    SLICE_X24Y99.B       Tilo                  0.205   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In2
+    SLICE_X24Y99.D1      net (fanout=1)        0.443   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In1
+    SLICE_X24Y99.CMUX    Topdc                 0.338   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5_F
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5
+    SLICE_X23Y99.A1      net (fanout=8)        0.670   vga_sync_instance/v_sync_instance/state_next<0>
+    SLICE_X23Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
+                                                       vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
+    SLICE_X23Y100.D3     net (fanout=11)       0.524   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
+    SLICE_X23Y100.D      Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<6>
+                                                       vga_sync_instance/v_sync_instance/Mmux_count_next81
+    SLICE_X25Y101.D2     net (fanout=1)        0.803   vga_sync_instance/v_sync_instance/count_next<6>
+    SLICE_X25Y101.CLK    Tas                   0.322   vga_sync_instance/v_sync_instance/column_reg<6>
+                                                       vga_sync_instance/v_sync_instance/Mmux_column_next81
+                                                       vga_sync_instance/v_sync_instance/column_reg_6
+    -------------------------------------------------  ---------------------------
+    Total                                      5.700ns (2.033ns logic, 3.667ns route)
+                                                       (35.7% logic, 64.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     33.757ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga_sync_instance/v_sync_instance/count_reg_7 (FF)
+  Destination:          vga_sync_instance/v_sync_instance/column_reg_6 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      5.694ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.014ns (0.235 - 0.249)
+  Source Clock:         pixel_clk_BUFG rising at 0.000ns
+  Destination Clock:    pixel_clk_BUFG rising at 40.000ns
+  Clock Uncertainty:    0.535ns
+
+  Clock Uncertainty:          0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       1.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_7 to vga_sync_instance/v_sync_instance/column_reg_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y101.AQ     Tcko                  0.391   vga_sync_instance/v_sync_instance/count_reg<10>
+                                                       vga_sync_instance/v_sync_instance/count_reg_7
+    SLICE_X25Y99.B1      net (fanout=5)        0.941   vga_sync_instance/v_sync_instance/count_reg<7>
+    SLICE_X25Y99.B       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2_SW0
+    SLICE_X25Y99.A5      net (fanout=1)        0.187   N4
+    SLICE_X25Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2
+    SLICE_X26Y99.C1      net (fanout=3)        0.760   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2
+    SLICE_X26Y99.C       Tilo                  0.204   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2-In1
+    SLICE_X23Y99.A3      net (fanout=8)        0.526   vga_sync_instance/v_sync_instance/state_next<1>
+    SLICE_X23Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
+                                                       vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
+    SLICE_X23Y100.D3     net (fanout=11)       0.524   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
+    SLICE_X23Y100.D      Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<6>
+                                                       vga_sync_instance/v_sync_instance/Mmux_count_next81
+    SLICE_X25Y101.D2     net (fanout=1)        0.803   vga_sync_instance/v_sync_instance/count_next<6>
+    SLICE_X25Y101.CLK    Tas                   0.322   vga_sync_instance/v_sync_instance/column_reg<6>
+                                                       vga_sync_instance/v_sync_instance/Mmux_column_next81
+                                                       vga_sync_instance/v_sync_instance/column_reg_6
+    -------------------------------------------------  ---------------------------
+    Total                                      5.694ns (1.953ns logic, 3.741ns route)
+                                                       (34.3% logic, 65.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point vga_sync_instance/v_sync_instance/column_reg_8 (SLICE_X24Y101.A4), 105 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     33.851ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga_sync_instance/v_sync_instance/count_reg_7 (FF)
+  Destination:          vga_sync_instance/v_sync_instance/column_reg_8 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      5.600ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.014ns (0.235 - 0.249)
+  Source Clock:         pixel_clk_BUFG rising at 0.000ns
+  Destination Clock:    pixel_clk_BUFG rising at 40.000ns
+  Clock Uncertainty:    0.535ns
+
+  Clock Uncertainty:          0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       1.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_7 to vga_sync_instance/v_sync_instance/column_reg_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y101.AQ     Tcko                  0.391   vga_sync_instance/v_sync_instance/count_reg<10>
+                                                       vga_sync_instance/v_sync_instance/count_reg_7
+    SLICE_X25Y99.B1      net (fanout=5)        0.941   vga_sync_instance/v_sync_instance/count_reg<7>
+    SLICE_X25Y99.B       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2_SW0
+    SLICE_X25Y99.A5      net (fanout=1)        0.187   N4
+    SLICE_X25Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2
+    SLICE_X24Y99.D2      net (fanout=3)        0.623   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2
+    SLICE_X24Y99.CMUX    Topdc                 0.338   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5_F
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5
+    SLICE_X23Y99.A1      net (fanout=8)        0.670   vga_sync_instance/v_sync_instance/state_next<0>
+    SLICE_X23Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
+                                                       vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
+    SLICE_X23Y101.B1     net (fanout=11)       0.648   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
+    SLICE_X23Y101.B      Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<10>
+                                                       vga_sync_instance/v_sync_instance/Mmux_count_next101
+    SLICE_X24Y101.A4     net (fanout=1)        0.425   vga_sync_instance/v_sync_instance/count_next<8>
+    SLICE_X24Y101.CLK    Tas                   0.341   vga_sync_instance/v_sync_instance/column_reg<10>
+                                                       vga_sync_instance/v_sync_instance/Mmux_column_next101
+                                                       vga_sync_instance/v_sync_instance/column_reg_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.600ns (2.106ns logic, 3.494ns route)
+                                                       (37.6% logic, 62.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     33.986ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga_sync_instance/v_sync_instance/count_reg_7 (FF)
+  Destination:          vga_sync_instance/v_sync_instance/column_reg_8 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      5.465ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.014ns (0.235 - 0.249)
+  Source Clock:         pixel_clk_BUFG rising at 0.000ns
+  Destination Clock:    pixel_clk_BUFG rising at 40.000ns
+  Clock Uncertainty:    0.535ns
+
+  Clock Uncertainty:          0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       1.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_7 to vga_sync_instance/v_sync_instance/column_reg_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y101.AQ     Tcko                  0.391   vga_sync_instance/v_sync_instance/count_reg<10>
+                                                       vga_sync_instance/v_sync_instance/count_reg_7
+    SLICE_X25Y99.C2      net (fanout=5)        0.948   vga_sync_instance/v_sync_instance/count_reg<7>
+    SLICE_X25Y99.C       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In1
+    SLICE_X24Y99.B6      net (fanout=1)        0.279   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In
+    SLICE_X24Y99.B       Tilo                  0.205   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In2
+    SLICE_X24Y99.D1      net (fanout=1)        0.443   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In1
+    SLICE_X24Y99.CMUX    Topdc                 0.338   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5_F
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5
+    SLICE_X23Y99.A1      net (fanout=8)        0.670   vga_sync_instance/v_sync_instance/state_next<0>
+    SLICE_X23Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
+                                                       vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
+    SLICE_X23Y101.B1     net (fanout=11)       0.648   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
+    SLICE_X23Y101.B      Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<10>
+                                                       vga_sync_instance/v_sync_instance/Mmux_count_next101
+    SLICE_X24Y101.A4     net (fanout=1)        0.425   vga_sync_instance/v_sync_instance/count_next<8>
+    SLICE_X24Y101.CLK    Tas                   0.341   vga_sync_instance/v_sync_instance/column_reg<10>
+                                                       vga_sync_instance/v_sync_instance/Mmux_column_next101
+                                                       vga_sync_instance/v_sync_instance/column_reg_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.465ns (2.052ns logic, 3.413ns route)
+                                                       (37.5% logic, 62.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     33.992ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga_sync_instance/v_sync_instance/count_reg_7 (FF)
+  Destination:          vga_sync_instance/v_sync_instance/column_reg_8 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      5.459ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.014ns (0.235 - 0.249)
+  Source Clock:         pixel_clk_BUFG rising at 0.000ns
+  Destination Clock:    pixel_clk_BUFG rising at 40.000ns
+  Clock Uncertainty:    0.535ns
+
+  Clock Uncertainty:          0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       1.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_7 to vga_sync_instance/v_sync_instance/column_reg_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y101.AQ     Tcko                  0.391   vga_sync_instance/v_sync_instance/count_reg<10>
+                                                       vga_sync_instance/v_sync_instance/count_reg_7
+    SLICE_X25Y99.B1      net (fanout=5)        0.941   vga_sync_instance/v_sync_instance/count_reg<7>
+    SLICE_X25Y99.B       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2_SW0
+    SLICE_X25Y99.A5      net (fanout=1)        0.187   N4
+    SLICE_X25Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2
+    SLICE_X26Y99.C1      net (fanout=3)        0.760   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2
+    SLICE_X26Y99.C       Tilo                  0.204   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2-In1
+    SLICE_X23Y99.A3      net (fanout=8)        0.526   vga_sync_instance/v_sync_instance/state_next<1>
+    SLICE_X23Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
+                                                       vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
+    SLICE_X23Y101.B1     net (fanout=11)       0.648   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
+    SLICE_X23Y101.B      Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<10>
+                                                       vga_sync_instance/v_sync_instance/Mmux_count_next101
+    SLICE_X24Y101.A4     net (fanout=1)        0.425   vga_sync_instance/v_sync_instance/count_next<8>
+    SLICE_X24Y101.CLK    Tas                   0.341   vga_sync_instance/v_sync_instance/column_reg<10>
+                                                       vga_sync_instance/v_sync_instance/Mmux_column_next101
+                                                       vga_sync_instance/v_sync_instance/column_reg_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.459ns (1.972ns logic, 3.487ns route)
+                                                       (36.1% logic, 63.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point vga_sync_instance/v_sync_instance/column_reg_10 (SLICE_X24Y101.B4), 107 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     33.916ns (requirement - (data path - clock path skew + uncertainty))
   Source:               vga_sync_instance/v_sync_instance/count_reg_7 (FF)
   Destination:          vga_sync_instance/v_sync_instance/column_reg_10 (FF)
   Requirement:          40.000ns
-  Data Path Delay:      6.753ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.015ns (0.240 - 0.255)
+  Data Path Delay:      5.535ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.014ns (0.235 - 0.249)
   Source Clock:         pixel_clk_BUFG rising at 0.000ns
   Destination Clock:    pixel_clk_BUFG rising at 40.000ns
   Clock Uncertainty:    0.535ns
@@ -722,134 +675,39 @@ Slack (setup path):     32.697ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X9Y93.AQ       Tcko                  0.391   vga_sync_instance/v_sync_instance/count_reg<10>
+    SLICE_X23Y101.AQ     Tcko                  0.391   vga_sync_instance/v_sync_instance/count_reg<10>
                                                        vga_sync_instance/v_sync_instance/count_reg_7
-    SLICE_X13Y99.D3      net (fanout=5)        0.983   vga_sync_instance/v_sync_instance/count_reg<7>
-    SLICE_X13Y99.DMUX    Tilo                  0.313   inst_dvid/TDMS_encoder_green/encoded<9>
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>_SW0
-    SLICE_X10Y92.B5      net (fanout=1)        0.807   N2
-    SLICE_X10Y92.B       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>
-    SLICE_X10Y92.A5      net (fanout=3)        0.233   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o
-    SLICE_X10Y92.A       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd1-In1
-    SLICE_X11Y92.A3      net (fanout=8)        1.047   vga_sync_instance/v_sync_instance/completed_next
-    SLICE_X11Y92.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
+    SLICE_X25Y99.B1      net (fanout=5)        0.941   vga_sync_instance/v_sync_instance/count_reg<7>
+    SLICE_X25Y99.B       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2_SW0
+    SLICE_X25Y99.A5      net (fanout=1)        0.187   N4
+    SLICE_X25Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2
+    SLICE_X24Y99.D2      net (fanout=3)        0.623   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2
+    SLICE_X24Y99.CMUX    Topdc                 0.338   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5_F
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5
+    SLICE_X23Y99.A1      net (fanout=8)        0.670   vga_sync_instance/v_sync_instance/state_next<0>
+    SLICE_X23Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
                                                        vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
-    SLICE_X9Y93.D2       net (fanout=11)       0.837   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
-    SLICE_X9Y93.D        Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<10>
+    SLICE_X23Y101.D3     net (fanout=11)       0.544   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
+    SLICE_X23Y101.D      Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<10>
                                                        vga_sync_instance/v_sync_instance/Mmux_count_next21
-    SLICE_X12Y92.B2      net (fanout=1)        0.877   vga_sync_instance/v_sync_instance/count_next<10>
-    SLICE_X12Y92.CLK     Tas                   0.341   vga_sync_instance/v_sync_instance/column_reg<10>
+    SLICE_X24Y101.B4     net (fanout=1)        0.464   vga_sync_instance/v_sync_instance/count_next<10>
+    SLICE_X24Y101.CLK    Tas                   0.341   vga_sync_instance/v_sync_instance/column_reg<10>
                                                        vga_sync_instance/v_sync_instance/Mmux_column_next21
                                                        vga_sync_instance/v_sync_instance/column_reg_10
     -------------------------------------------------  ---------------------------
-    Total                                      6.753ns (1.969ns logic, 4.784ns route)
-                                                       (29.2% logic, 70.8% route)
+    Total                                      5.535ns (2.106ns logic, 3.429ns route)
+                                                       (38.0% logic, 62.0% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point vga_sync_instance/v_sync_instance/column_reg_4 (SLICE_X13Y92.C2), 101 paths
---------------------------------------------------------------------------------
-Slack (setup path):     33.036ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vga_sync_instance/v_sync_instance/count_reg_6 (FF)
-  Destination:          vga_sync_instance/v_sync_instance/column_reg_4 (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.418ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.011ns (0.151 - 0.162)
-  Source Clock:         pixel_clk_BUFG rising at 0.000ns
-  Destination Clock:    pixel_clk_BUFG rising at 40.000ns
-  Clock Uncertainty:    0.535ns
-
-  Clock Uncertainty:          0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       1.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_6 to vga_sync_instance/v_sync_instance/column_reg_4
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X12Y93.DQ      Tcko                  0.408   vga_sync_instance/v_sync_instance/count_reg<6>
-                                                       vga_sync_instance/v_sync_instance/count_reg_6
-    SLICE_X13Y99.D2      net (fanout=5)        1.015   vga_sync_instance/v_sync_instance/count_reg<6>
-    SLICE_X13Y99.DMUX    Tilo                  0.313   inst_dvid/TDMS_encoder_green/encoded<9>
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>_SW0
-    SLICE_X10Y92.B5      net (fanout=1)        0.807   N2
-    SLICE_X10Y92.B       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>
-    SLICE_X10Y92.A5      net (fanout=3)        0.233   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o
-    SLICE_X10Y92.A       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd1-In1
-    SLICE_X11Y92.A3      net (fanout=8)        1.047   vga_sync_instance/v_sync_instance/completed_next
-    SLICE_X11Y92.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
-                                                       vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
-    SLICE_X12Y93.B3      net (fanout=11)       0.714   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
-    SLICE_X12Y93.B       Tilo                  0.205   vga_sync_instance/v_sync_instance/count_reg<6>
-                                                       vga_sync_instance/v_sync_instance/Mmux_count_next61
-    SLICE_X13Y92.C2      net (fanout=1)        0.689   vga_sync_instance/v_sync_instance/count_next<4>
-    SLICE_X13Y92.CLK     Tas                   0.322   vga_sync_instance/v_sync_instance/column_reg<6>
-                                                       vga_sync_instance/v_sync_instance/Mmux_column_next61
-                                                       vga_sync_instance/v_sync_instance/column_reg_4
-    -------------------------------------------------  ---------------------------
-    Total                                      6.418ns (1.913ns logic, 4.505ns route)
-                                                       (29.8% logic, 70.2% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     33.077ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vga_sync_instance/v_sync_instance/count_reg_6 (FF)
-  Destination:          vga_sync_instance/v_sync_instance/column_reg_4 (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.377ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.011ns (0.151 - 0.162)
-  Source Clock:         pixel_clk_BUFG rising at 0.000ns
-  Destination Clock:    pixel_clk_BUFG rising at 40.000ns
-  Clock Uncertainty:    0.535ns
-
-  Clock Uncertainty:          0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       1.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_6 to vga_sync_instance/v_sync_instance/column_reg_4
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X12Y93.DQ      Tcko                  0.408   vga_sync_instance/v_sync_instance/count_reg<6>
-                                                       vga_sync_instance/v_sync_instance/count_reg_6
-    SLICE_X13Y99.D2      net (fanout=5)        1.015   vga_sync_instance/v_sync_instance/count_reg<6>
-    SLICE_X13Y99.DMUX    Tilo                  0.313   inst_dvid/TDMS_encoder_green/encoded<9>
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>_SW0
-    SLICE_X10Y92.B5      net (fanout=1)        0.807   N2
-    SLICE_X10Y92.B       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>
-    SLICE_X10Y93.C4      net (fanout=3)        0.439   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o
-    SLICE_X10Y93.CMUX    Tilo                  0.361   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
-                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5_G
-                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5
-    SLICE_X11Y92.A1      net (fanout=8)        0.642   vga_sync_instance/v_sync_instance/state_next<0>
-    SLICE_X11Y92.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
-                                                       vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
-    SLICE_X12Y93.B3      net (fanout=11)       0.714   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
-    SLICE_X12Y93.B       Tilo                  0.205   vga_sync_instance/v_sync_instance/count_reg<6>
-                                                       vga_sync_instance/v_sync_instance/Mmux_count_next61
-    SLICE_X13Y92.C2      net (fanout=1)        0.689   vga_sync_instance/v_sync_instance/count_next<4>
-    SLICE_X13Y92.CLK     Tas                   0.322   vga_sync_instance/v_sync_instance/column_reg<6>
-                                                       vga_sync_instance/v_sync_instance/Mmux_column_next61
-                                                       vga_sync_instance/v_sync_instance/column_reg_4
-    -------------------------------------------------  ---------------------------
-    Total                                      6.377ns (2.071ns logic, 4.306ns route)
-                                                       (32.5% logic, 67.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     33.081ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     34.051ns (requirement - (data path - clock path skew + uncertainty))
   Source:               vga_sync_instance/v_sync_instance/count_reg_7 (FF)
-  Destination:          vga_sync_instance/v_sync_instance/column_reg_4 (FF)
+  Destination:          vga_sync_instance/v_sync_instance/column_reg_10 (FF)
   Requirement:          40.000ns
-  Data Path Delay:      6.369ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.015ns (0.240 - 0.255)
+  Data Path Delay:      5.400ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.014ns (0.235 - 0.249)
   Source Clock:         pixel_clk_BUFG rising at 0.000ns
   Destination Clock:    pixel_clk_BUFG rising at 40.000ns
   Clock Uncertainty:    0.535ns
@@ -860,138 +718,43 @@ Slack (setup path):     33.081ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       1.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_7 to vga_sync_instance/v_sync_instance/column_reg_4
+  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_7 to vga_sync_instance/v_sync_instance/column_reg_10
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X9Y93.AQ       Tcko                  0.391   vga_sync_instance/v_sync_instance/count_reg<10>
+    SLICE_X23Y101.AQ     Tcko                  0.391   vga_sync_instance/v_sync_instance/count_reg<10>
                                                        vga_sync_instance/v_sync_instance/count_reg_7
-    SLICE_X13Y99.D3      net (fanout=5)        0.983   vga_sync_instance/v_sync_instance/count_reg<7>
-    SLICE_X13Y99.DMUX    Tilo                  0.313   inst_dvid/TDMS_encoder_green/encoded<9>
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>_SW0
-    SLICE_X10Y92.B5      net (fanout=1)        0.807   N2
-    SLICE_X10Y92.B       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>
-    SLICE_X10Y92.A5      net (fanout=3)        0.233   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o
-    SLICE_X10Y92.A       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd1-In1
-    SLICE_X11Y92.A3      net (fanout=8)        1.047   vga_sync_instance/v_sync_instance/completed_next
-    SLICE_X11Y92.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
-                                                       vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
-    SLICE_X12Y93.B3      net (fanout=11)       0.714   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
-    SLICE_X12Y93.B       Tilo                  0.205   vga_sync_instance/v_sync_instance/count_reg<6>
-                                                       vga_sync_instance/v_sync_instance/Mmux_count_next61
-    SLICE_X13Y92.C2      net (fanout=1)        0.689   vga_sync_instance/v_sync_instance/count_next<4>
-    SLICE_X13Y92.CLK     Tas                   0.322   vga_sync_instance/v_sync_instance/column_reg<6>
-                                                       vga_sync_instance/v_sync_instance/Mmux_column_next61
-                                                       vga_sync_instance/v_sync_instance/column_reg_4
-    -------------------------------------------------  ---------------------------
-    Total                                      6.369ns (1.896ns logic, 4.473ns route)
-                                                       (29.8% logic, 70.2% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point vga_sync_instance/v_sync_instance/column_reg_9 (SLICE_X12Y92.A1), 106 paths
---------------------------------------------------------------------------------
-Slack (setup path):     33.078ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vga_sync_instance/v_sync_instance/count_reg_6 (FF)
-  Destination:          vga_sync_instance/v_sync_instance/column_reg_9 (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.376ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.011ns (0.151 - 0.162)
-  Source Clock:         pixel_clk_BUFG rising at 0.000ns
-  Destination Clock:    pixel_clk_BUFG rising at 40.000ns
-  Clock Uncertainty:    0.535ns
-
-  Clock Uncertainty:          0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       1.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_6 to vga_sync_instance/v_sync_instance/column_reg_9
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X12Y93.DQ      Tcko                  0.408   vga_sync_instance/v_sync_instance/count_reg<6>
-                                                       vga_sync_instance/v_sync_instance/count_reg_6
-    SLICE_X13Y99.D2      net (fanout=5)        1.015   vga_sync_instance/v_sync_instance/count_reg<6>
-    SLICE_X13Y99.DMUX    Tilo                  0.313   inst_dvid/TDMS_encoder_green/encoded<9>
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>_SW0
-    SLICE_X10Y92.B5      net (fanout=1)        0.807   N2
-    SLICE_X10Y92.B       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>
-    SLICE_X10Y92.A5      net (fanout=3)        0.233   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o
-    SLICE_X10Y92.A       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd1-In1
-    SLICE_X11Y92.A3      net (fanout=8)        1.047   vga_sync_instance/v_sync_instance/completed_next
-    SLICE_X11Y92.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
-                                                       vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
-    SLICE_X9Y93.C3       net (fanout=11)       0.534   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
-    SLICE_X9Y93.C        Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<10>
-                                                       vga_sync_instance/v_sync_instance/Mmux_count_next111
-    SLICE_X12Y92.A1      net (fanout=1)        0.882   vga_sync_instance/v_sync_instance/count_next<9>
-    SLICE_X12Y92.CLK     Tas                   0.213   vga_sync_instance/v_sync_instance/column_reg<10>
-                                                       vga_sync_instance/v_sync_instance/Mmux_column_next111
-                                                       vga_sync_instance/v_sync_instance/column_reg_9
-    -------------------------------------------------  ---------------------------
-    Total                                      6.376ns (1.858ns logic, 4.518ns route)
-                                                       (29.1% logic, 70.9% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     33.119ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vga_sync_instance/v_sync_instance/count_reg_6 (FF)
-  Destination:          vga_sync_instance/v_sync_instance/column_reg_9 (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.335ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.011ns (0.151 - 0.162)
-  Source Clock:         pixel_clk_BUFG rising at 0.000ns
-  Destination Clock:    pixel_clk_BUFG rising at 40.000ns
-  Clock Uncertainty:    0.535ns
-
-  Clock Uncertainty:          0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       1.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_6 to vga_sync_instance/v_sync_instance/column_reg_9
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X12Y93.DQ      Tcko                  0.408   vga_sync_instance/v_sync_instance/count_reg<6>
-                                                       vga_sync_instance/v_sync_instance/count_reg_6
-    SLICE_X13Y99.D2      net (fanout=5)        1.015   vga_sync_instance/v_sync_instance/count_reg<6>
-    SLICE_X13Y99.DMUX    Tilo                  0.313   inst_dvid/TDMS_encoder_green/encoded<9>
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>_SW0
-    SLICE_X10Y92.B5      net (fanout=1)        0.807   N2
-    SLICE_X10Y92.B       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>
-    SLICE_X10Y93.C4      net (fanout=3)        0.439   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o
-    SLICE_X10Y93.CMUX    Tilo                  0.361   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
-                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5_G
+    SLICE_X25Y99.C2      net (fanout=5)        0.948   vga_sync_instance/v_sync_instance/count_reg<7>
+    SLICE_X25Y99.C       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In1
+    SLICE_X24Y99.B6      net (fanout=1)        0.279   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In
+    SLICE_X24Y99.B       Tilo                  0.205   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In2
+    SLICE_X24Y99.D1      net (fanout=1)        0.443   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In1
+    SLICE_X24Y99.CMUX    Topdc                 0.338   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5_F
                                                        vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5
-    SLICE_X11Y92.A1      net (fanout=8)        0.642   vga_sync_instance/v_sync_instance/state_next<0>
-    SLICE_X11Y92.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
+    SLICE_X23Y99.A1      net (fanout=8)        0.670   vga_sync_instance/v_sync_instance/state_next<0>
+    SLICE_X23Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
                                                        vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
-    SLICE_X9Y93.C3       net (fanout=11)       0.534   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
-    SLICE_X9Y93.C        Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<10>
-                                                       vga_sync_instance/v_sync_instance/Mmux_count_next111
-    SLICE_X12Y92.A1      net (fanout=1)        0.882   vga_sync_instance/v_sync_instance/count_next<9>
-    SLICE_X12Y92.CLK     Tas                   0.213   vga_sync_instance/v_sync_instance/column_reg<10>
-                                                       vga_sync_instance/v_sync_instance/Mmux_column_next111
-                                                       vga_sync_instance/v_sync_instance/column_reg_9
+    SLICE_X23Y101.D3     net (fanout=11)       0.544   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
+    SLICE_X23Y101.D      Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<10>
+                                                       vga_sync_instance/v_sync_instance/Mmux_count_next21
+    SLICE_X24Y101.B4     net (fanout=1)        0.464   vga_sync_instance/v_sync_instance/count_next<10>
+    SLICE_X24Y101.CLK    Tas                   0.341   vga_sync_instance/v_sync_instance/column_reg<10>
+                                                       vga_sync_instance/v_sync_instance/Mmux_column_next21
+                                                       vga_sync_instance/v_sync_instance/column_reg_10
     -------------------------------------------------  ---------------------------
-    Total                                      6.335ns (2.016ns logic, 4.319ns route)
-                                                       (31.8% logic, 68.2% route)
+    Total                                      5.400ns (2.052ns logic, 3.348ns route)
+                                                       (38.0% logic, 62.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     33.123ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     34.057ns (requirement - (data path - clock path skew + uncertainty))
   Source:               vga_sync_instance/v_sync_instance/count_reg_7 (FF)
-  Destination:          vga_sync_instance/v_sync_instance/column_reg_9 (FF)
+  Destination:          vga_sync_instance/v_sync_instance/column_reg_10 (FF)
   Requirement:          40.000ns
-  Data Path Delay:      6.327ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.015ns (0.240 - 0.255)
+  Data Path Delay:      5.394ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.014ns (0.235 - 0.249)
   Source Clock:         pixel_clk_BUFG rising at 0.000ns
   Destination Clock:    pixel_clk_BUFG rising at 40.000ns
   Clock Uncertainty:    0.535ns
@@ -1002,34 +765,34 @@ Slack (setup path):     33.123ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       1.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_7 to vga_sync_instance/v_sync_instance/column_reg_9
+  Maximum Data Path at Slow Process Corner: vga_sync_instance/v_sync_instance/count_reg_7 to vga_sync_instance/v_sync_instance/column_reg_10
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X9Y93.AQ       Tcko                  0.391   vga_sync_instance/v_sync_instance/count_reg<10>
+    SLICE_X23Y101.AQ     Tcko                  0.391   vga_sync_instance/v_sync_instance/count_reg<10>
                                                        vga_sync_instance/v_sync_instance/count_reg_7
-    SLICE_X13Y99.D3      net (fanout=5)        0.983   vga_sync_instance/v_sync_instance/count_reg<7>
-    SLICE_X13Y99.DMUX    Tilo                  0.313   inst_dvid/TDMS_encoder_green/encoded<9>
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>_SW0
-    SLICE_X10Y92.B5      net (fanout=1)        0.807   N2
-    SLICE_X10Y92.B       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o<10>
-    SLICE_X10Y92.A5      net (fanout=3)        0.233   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_14_o
-    SLICE_X10Y92.A       Tilo                  0.203   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
-                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd1-In1
-    SLICE_X11Y92.A3      net (fanout=8)        1.047   vga_sync_instance/v_sync_instance/completed_next
-    SLICE_X11Y92.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
+    SLICE_X25Y99.B1      net (fanout=5)        0.941   vga_sync_instance/v_sync_instance/count_reg<7>
+    SLICE_X25Y99.B       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2_SW0
+    SLICE_X25Y99.A5      net (fanout=1)        0.187   N4
+    SLICE_X25Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>1
+                                                       vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2
+    SLICE_X26Y99.C1      net (fanout=3)        0.760   vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>2
+    SLICE_X26Y99.C       Tilo                  0.204   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd2-In1
+    SLICE_X23Y99.A3      net (fanout=8)        0.526   vga_sync_instance/v_sync_instance/state_next<1>
+    SLICE_X23Y99.A       Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<2>
                                                        vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1
-    SLICE_X9Y93.C3       net (fanout=11)       0.534   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
-    SLICE_X9Y93.C        Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<10>
-                                                       vga_sync_instance/v_sync_instance/Mmux_count_next111
-    SLICE_X12Y92.A1      net (fanout=1)        0.882   vga_sync_instance/v_sync_instance/count_next<9>
-    SLICE_X12Y92.CLK     Tas                   0.213   vga_sync_instance/v_sync_instance/column_reg<10>
-                                                       vga_sync_instance/v_sync_instance/Mmux_column_next111
-                                                       vga_sync_instance/v_sync_instance/column_reg_9
+    SLICE_X23Y101.D3     net (fanout=11)       0.544   vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o
+    SLICE_X23Y101.D      Tilo                  0.259   vga_sync_instance/v_sync_instance/count_reg<10>
+                                                       vga_sync_instance/v_sync_instance/Mmux_count_next21
+    SLICE_X24Y101.B4     net (fanout=1)        0.464   vga_sync_instance/v_sync_instance/count_next<10>
+    SLICE_X24Y101.CLK    Tas                   0.341   vga_sync_instance/v_sync_instance/column_reg<10>
+                                                       vga_sync_instance/v_sync_instance/Mmux_column_next21
+                                                       vga_sync_instance/v_sync_instance/column_reg_10
     -------------------------------------------------  ---------------------------
-    Total                                      6.327ns (1.841ns logic, 4.486ns route)
-                                                       (29.1% logic, 70.9% route)
+    Total                                      5.394ns (1.972ns logic, 3.422ns route)
+                                                       (36.6% logic, 63.4% route)
 
 --------------------------------------------------------------------------------
 
@@ -1039,87 +802,86 @@ Hold Paths: PERIOD analysis for net "pixel_clk" derived from
 
 --------------------------------------------------------------------------------
 
-Paths for end point vga_sync_instance/v_sync_instance/count_reg_6 (SLICE_X12Y93.D6), 1 path
+Paths for end point vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3 (SLICE_X24Y99.CX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.421ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               vga_sync_instance/v_sync_instance/count_reg_6 (FF)
-  Destination:          vga_sync_instance/v_sync_instance/count_reg_6 (FF)
+Slack (hold path):      0.406ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3 (FF)
+  Destination:          vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.421ns (Levels of Logic = 1)
+  Data Path Delay:      0.406ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         pixel_clk_BUFG rising at 40.000ns
   Destination Clock:    pixel_clk_BUFG rising at 40.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: vga_sync_instance/v_sync_instance/count_reg_6 to vga_sync_instance/v_sync_instance/count_reg_6
+  Minimum Data Path at Fast Process Corner: vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3 to vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y93.DQ      Tcko                  0.200   vga_sync_instance/v_sync_instance/count_reg<6>
-                                                       vga_sync_instance/v_sync_instance/count_reg_6
-    SLICE_X12Y93.D6      net (fanout=5)        0.031   vga_sync_instance/v_sync_instance/count_reg<6>
-    SLICE_X12Y93.CLK     Tah         (-Th)    -0.190   vga_sync_instance/v_sync_instance/count_reg<6>
-                                                       vga_sync_instance/v_sync_instance/Mmux_count_next81
-                                                       vga_sync_instance/v_sync_instance/count_reg_6
+    SLICE_X24Y99.CQ      Tcko                  0.200   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
+    SLICE_X24Y99.CX      net (fanout=4)        0.100   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
+    SLICE_X24Y99.CLK     Tckdi       (-Th)    -0.106   vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In5
+                                                       vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3
     -------------------------------------------------  ---------------------------
-    Total                                      0.421ns (0.390ns logic, 0.031ns route)
-                                                       (92.6% logic, 7.4% route)
+    Total                                      0.406ns (0.306ns logic, 0.100ns route)
+                                                       (75.4% logic, 24.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point vga_sync_instance/v_sync_instance/count_reg_3 (SLICE_X12Y93.A6), 1 path
+Paths for end point inst_dvid/latched_blue_8 (SLICE_X27Y106.CX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.428ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               vga_sync_instance/v_sync_instance/count_reg_3 (FF)
-  Destination:          vga_sync_instance/v_sync_instance/count_reg_3 (FF)
+Slack (hold path):      0.422ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               inst_dvid/TDMS_encoder_blue/encoded_8 (FF)
+  Destination:          inst_dvid/latched_blue_8 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.428ns (Levels of Logic = 1)
+  Data Path Delay:      0.424ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.037 - 0.035)
+  Source Clock:         pixel_clk_BUFG rising at 40.000ns
+  Destination Clock:    pixel_clk_BUFG rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: inst_dvid/TDMS_encoder_blue/encoded_8 to inst_dvid/latched_blue_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y106.AMUX   Tshcko                0.266   blank
+                                                       inst_dvid/TDMS_encoder_blue/encoded_8
+    SLICE_X27Y106.CX     net (fanout=1)        0.099   inst_dvid/TDMS_encoder_blue/encoded<8>
+    SLICE_X27Y106.CLK    Tckdi       (-Th)    -0.059   inst_dvid/latched_blue<9>
+                                                       inst_dvid/latched_blue_8
+    -------------------------------------------------  ---------------------------
+    Total                                      0.424ns (0.325ns logic, 0.099ns route)
+                                                       (76.7% logic, 23.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point inst_dvid/TDMS_encoder_blue/dc_bias_3 (SLICE_X26Y105.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.423ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               inst_dvid/TDMS_encoder_blue/dc_bias_2 (FF)
+  Destination:          inst_dvid/TDMS_encoder_blue/dc_bias_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.423ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         pixel_clk_BUFG rising at 40.000ns
   Destination Clock:    pixel_clk_BUFG rising at 40.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: vga_sync_instance/v_sync_instance/count_reg_3 to vga_sync_instance/v_sync_instance/count_reg_3
+  Minimum Data Path at Fast Process Corner: inst_dvid/TDMS_encoder_blue/dc_bias_2 to inst_dvid/TDMS_encoder_blue/dc_bias_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y93.AQ      Tcko                  0.200   vga_sync_instance/v_sync_instance/count_reg<6>
-                                                       vga_sync_instance/v_sync_instance/count_reg_3
-    SLICE_X12Y93.A6      net (fanout=6)        0.038   vga_sync_instance/v_sync_instance/count_reg<3>
-    SLICE_X12Y93.CLK     Tah         (-Th)    -0.190   vga_sync_instance/v_sync_instance/count_reg<6>
-                                                       vga_sync_instance/v_sync_instance/Mmux_count_next51
-                                                       vga_sync_instance/v_sync_instance/count_reg_3
+    SLICE_X26Y105.BQ     Tcko                  0.234   inst_dvid/TDMS_encoder_blue/dc_bias<2>
+                                                       inst_dvid/TDMS_encoder_blue/dc_bias_2
+    SLICE_X26Y105.B5     net (fanout=1)        0.058   inst_dvid/TDMS_encoder_blue/dc_bias<2>
+    SLICE_X26Y105.CLK    Tah         (-Th)    -0.131   inst_dvid/TDMS_encoder_blue/dc_bias<2>
+                                                       inst_dvid/TDMS_encoder_blue/Maccum_dc_bias_xor<3>11
+                                                       inst_dvid/TDMS_encoder_blue/dc_bias_3
     -------------------------------------------------  ---------------------------
-    Total                                      0.428ns (0.390ns logic, 0.038ns route)
-                                                       (91.1% logic, 8.9% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point inst_dvid/TDMS_encoder_green/dc_bias_0 (SLICE_X12Y101.A6), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.437ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               inst_dvid/TDMS_encoder_green/dc_bias_0 (FF)
-  Destination:          inst_dvid/TDMS_encoder_green/dc_bias_0 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.437ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         pixel_clk_BUFG rising at 40.000ns
-  Destination Clock:    pixel_clk_BUFG rising at 40.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path at Fast Process Corner: inst_dvid/TDMS_encoder_green/dc_bias_0 to inst_dvid/TDMS_encoder_green/dc_bias_0
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X12Y101.AQ     Tcko                  0.200   inst_dvid/TDMS_encoder_green/dc_bias<1>
-                                                       inst_dvid/TDMS_encoder_green/dc_bias_0
-    SLICE_X12Y101.A6     net (fanout=6)        0.047   inst_dvid/TDMS_encoder_green/dc_bias<0>
-    SLICE_X12Y101.CLK    Tah         (-Th)    -0.190   inst_dvid/TDMS_encoder_green/dc_bias<1>
-                                                       inst_dvid/TDMS_encoder_green/Maccum_dc_bias_xor<0>11
-                                                       inst_dvid/TDMS_encoder_green/dc_bias_0
-    -------------------------------------------------  ---------------------------
-    Total                                      0.437ns (0.390ns logic, 0.047ns route)
-                                                       (89.2% logic, 10.8% route)
+    Total                                      0.423ns (0.365ns logic, 0.058ns route)
+                                                       (86.3% logic, 13.7% route)
 
 --------------------------------------------------------------------------------
 
@@ -1147,9 +909,9 @@ Slack: 38.270ns (period - min period limit)
 Slack: 39.570ns (period - min period limit)
   Period: 40.000ns
   Min period limit: 0.430ns (2325.581MHz) (Tcp)
-  Physical resource: vga_sync_instance/h_sync_instance/count_reg<3>/CLK
-  Logical resource: vga_sync_instance/h_sync_instance/count_reg_0/CK
-  Location pin: SLICE_X28Y97.CLK
+  Physical resource: vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3/CLK
+  Logical resource: vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3/CK
+  Location pin: SLICE_X24Y99.CLK
   Clock network: pixel_clk_BUFG
 --------------------------------------------------------------------------------
 
@@ -1161,10 +923,10 @@ Derived Constraints for clk_IBUFG
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|clk_IBUFG                      |     10.000ns|      5.340ns|      6.051ns|            0|            0|            0|         9295|
-| serialize_clk                 |      8.000ns|      4.841ns|          N/A|            0|            0|          372|            0|
+|clk_IBUFG                      |     10.000ns|      5.340ns|      6.071ns|            0|            0|            0|         8333|
+| serialize_clk                 |      8.000ns|      4.857ns|          N/A|            0|            0|          372|            0|
 | serialize_clk_n               |      8.000ns|      2.670ns|          N/A|            0|            0|            0|            0|
-| pixel_clk                     |     40.000ns|      7.348ns|          N/A|            0|            0|         8923|            0|
+| pixel_clk                     |     40.000ns|      6.384ns|          N/A|            0|            0|         7961|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
@@ -1179,7 +941,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    7.348|         |         |         |
+clk            |    6.384|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -1188,16 +950,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 9295 paths, 0 nets, and 642 connections
+Constraints cover 8333 paths, 0 nets, and 489 connections
 
 Design statistics:
-   Minimum period:   7.348ns{1}   (Maximum frequency: 136.091MHz)
+   Minimum period:   6.384ns{1}   (Maximum frequency: 156.642MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Wed Feb 05 16:35:24 2014 
+Analysis completed Wed Feb 05 16:53:58 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

@@ -1,7 +1,7 @@
 Release 14.1 - par P.15xf (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Wed Feb 05 16:35:17 2014
+Wed Feb 05 16:53:50 2014
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -29,7 +29,7 @@ Pinout by Pin Number:
 |A7        |tmdsb<1>   |IOBS     |IO_L10N_0                    |         |TMDS_33    |0             |          |         |           |         |         |LOCATED   |NO         |                |
 |A8        |tmdsb<2>   |IOBS     |IO_L33N_0                    |         |TMDS_33    |0             |          |         |           |         |         |LOCATED   |NO         |                |
 |A9        |           |IOBS     |IO_L35N_GCLK16_0             |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
-|A10       |           |IOBS     |IO_L37N_GCLK12_0             |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
+|A10       |SW0        |IOB      |IO_L37N_GCLK12_0             |INPUT    |LVCMOS33   |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |A11       |           |IOBS     |IO_L39N_0                    |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A12       |           |IOBS     |IO_L41N_0                    |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A13       |           |IOBS     |IO_L50N_0                    |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
@@ -87,7 +87,7 @@ Pinout by Pin Number:
 |D11       |           |IOBM     |IO_L36P_GCLK15_0             |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |D12       |           |         |NC                           |         |           |              |          |         |           |         |         |          |           |                |
 |D13       |           |         |VCCO_0                       |         |           |0             |          |         |           |         |3.30     |          |           |                |
-|D14       |           |IOBM     |IO_L65P_SCP3_0               |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
+|D14       |SW1        |IOB      |IO_L65P_SCP3_0               |INPUT    |LVCMOS33   |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |D15       |           |         |TDI                          |         |           |              |          |         |           |         |         |          |           |                |
 |D16       |           |         |TDO                          |         |           |              |          |         |           |         |         |          |           |                |
 |D17       |           |IOBM     |IO_L31P_A19_M1CKE_1          |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
