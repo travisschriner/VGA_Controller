@@ -37,7 +37,7 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-reset       |    3.819(R)|      SLOW  |   -1.565(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
+reset       |    1.922(R)|      SLOW  |    0.795(R)|      SLOW  |pixel_clk_BUFG    |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -45,14 +45,14 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-tmds<0>     |         7.940(R)|      SLOW  |         4.165(R)|      FAST  |serialize_clk_BUFG|   0.000|
-tmds<1>     |         7.992(R)|      SLOW  |         4.217(R)|      FAST  |serialize_clk_BUFG|   0.000|
-tmds<2>     |         7.992(R)|      SLOW  |         4.217(R)|      FAST  |serialize_clk_BUFG|   0.000|
-tmds<3>     |         7.991(R)|      SLOW  |         4.216(R)|      FAST  |serialize_clk_BUFG|   0.000|
-tmdsb<0>    |         7.982(R)|      SLOW  |         4.181(R)|      FAST  |serialize_clk_BUFG|   0.000|
-tmdsb<1>    |         8.034(R)|      SLOW  |         4.233(R)|      FAST  |serialize_clk_BUFG|   0.000|
-tmdsb<2>    |         8.034(R)|      SLOW  |         4.233(R)|      FAST  |serialize_clk_BUFG|   0.000|
-tmdsb<3>    |         8.033(R)|      SLOW  |         4.232(R)|      FAST  |serialize_clk_BUFG|   0.000|
+tmds<0>     |         7.936(R)|      SLOW  |         4.094(R)|      FAST  |serialize_clk_BUFG|   0.000|
+tmds<1>     |         7.987(R)|      SLOW  |         4.145(R)|      FAST  |serialize_clk_BUFG|   0.000|
+tmds<2>     |         7.987(R)|      SLOW  |         4.145(R)|      FAST  |serialize_clk_BUFG|   0.000|
+tmds<3>     |         7.986(R)|      SLOW  |         4.144(R)|      FAST  |serialize_clk_BUFG|   0.000|
+tmdsb<0>    |         7.978(R)|      SLOW  |         4.110(R)|      FAST  |serialize_clk_BUFG|   0.000|
+tmdsb<1>    |         8.029(R)|      SLOW  |         4.161(R)|      FAST  |serialize_clk_BUFG|   0.000|
+tmdsb<2>    |         8.029(R)|      SLOW  |         4.161(R)|      FAST  |serialize_clk_BUFG|   0.000|
+tmdsb<3>    |         8.028(R)|      SLOW  |         4.160(R)|      FAST  |serialize_clk_BUFG|   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -60,11 +60,11 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.863|         |         |         |
+clk            |    5.447|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Feb 05 14:48:42 2014 
+Analysis completed Wed Feb 05 15:43:51 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

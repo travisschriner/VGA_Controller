@@ -99,28 +99,16 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_green/encoded_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">atlys_lab_video</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_red/encoded_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_red/encoded_3&gt; &lt;inst_dvid/TDMS_encoder_red/encoded_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/dc_bias_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/dc_bias_0&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_red/encoded_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_red/encoded_4&gt; &lt;inst_dvid/TDMS_encoder_red/encoded_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/dc_bias_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/dc_bias_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/encoded_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_blue/encoded_5&gt; &lt;inst_dvid/TDMS_encoder_blue/encoded_3&gt; &lt;inst_dvid/TDMS_encoder_blue/encoded_1&gt; &lt;inst_dvid/TDMS_encoder_blue/encoded_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/dc_bias_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/dc_bias_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/encoded_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_blue/encoded_4&gt; &lt;inst_dvid/TDMS_encoder_blue/encoded_2&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_green/encoded_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/encoded_5&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_3&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_1&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_0&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_green/encoded_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/encoded_6&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_4&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_2&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_blue_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_blue_5&gt; &lt;inst_dvid/latched_blue_3&gt; &lt;inst_dvid/latched_blue_1&gt; &lt;inst_dvid/latched_blue_0&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_blue_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_blue_4&gt; &lt;inst_dvid/latched_blue_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/dc_bias_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/dc_bias_3&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_green_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_green_5&gt; &lt;inst_dvid/latched_green_3&gt; &lt;inst_dvid/latched_green_1&gt; &lt;inst_dvid/latched_green_0&gt; </arg>
@@ -129,19 +117,37 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_green_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_green_6&gt; &lt;inst_dvid/latched_green_4&gt; &lt;inst_dvid/latched_green_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_red_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_red_3&gt; &lt;inst_dvid/latched_red_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_blue_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_blue_4&gt; &lt;inst_dvid/latched_blue_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_blue_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_blue_5&gt; &lt;inst_dvid/latched_blue_3&gt; &lt;inst_dvid/latched_blue_1&gt; &lt;inst_dvid/latched_blue_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_red/encoded_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_red/encoded_4&gt; &lt;inst_dvid/TDMS_encoder_red/encoded_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_red/encoded_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_red/encoded_5&gt; &lt;inst_dvid/TDMS_encoder_red/encoded_3&gt; &lt;inst_dvid/TDMS_encoder_red/encoded_1&gt; &lt;inst_dvid/TDMS_encoder_red/encoded_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_green/encoded_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/encoded_5&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_3&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_1&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_green/encoded_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_green/encoded_6&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_4&gt; &lt;inst_dvid/TDMS_encoder_green/encoded_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_red/dc_bias_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_red/dc_bias_2&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_red_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_red_4&gt; &lt;inst_dvid/latched_red_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_red/encoded_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_red/encoded_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_red_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_red_5&gt; &lt;inst_dvid/latched_red_3&gt; &lt;inst_dvid/latched_red_1&gt; &lt;inst_dvid/latched_red_0&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_red/encoded_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_red/encoded_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/encoded_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_blue/encoded_4&gt; &lt;inst_dvid/TDMS_encoder_blue/encoded_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/latched_red_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/latched_red_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_dvid/TDMS_encoder_blue/encoded_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">atlys_lab_video</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_dvid/TDMS_encoder_blue/encoded_5&gt; &lt;inst_dvid/TDMS_encoder_blue/encoded_3&gt; &lt;inst_dvid/TDMS_encoder_blue/encoded_1&gt; &lt;inst_dvid/TDMS_encoder_blue/encoded_0&gt; </arg>
 </msg>
 
 </messages>

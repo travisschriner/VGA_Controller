@@ -59,7 +59,7 @@ begin
 				
 				
 		vga_sync_instance : entity work.vga_sync(behavioral)
-			port map (	clk   		=> clk,
+			port map (	clk   		=> pixel_clk,
 							reset  		=> reset,
 							h_sync   	=> h_sync,
 							v_sync   	=> v_sync,

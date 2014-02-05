@@ -18,8 +18,8 @@ ARCHITECTURE behavior OF vga_sync_test IS
          v_sync : OUT  std_logic;
          v_completed : OUT  std_logic;
          blank : OUT  std_logic;
-         row : OUT  std_logic_vector(10 downto 0);
-         column : OUT  std_logic_vector(10 downto 0)
+         row : OUT  unsigned(10 downto 0);
+         column : OUT  unsigned(10 downto 0)
         );
     END COMPONENT;
     
@@ -33,8 +33,8 @@ ARCHITECTURE behavior OF vga_sync_test IS
    signal v_sync : std_logic;
    signal v_completed : std_logic;
    signal blank : std_logic;
-   signal row : std_logic_vector(10 downto 0);
-   signal column : std_logic_vector(10 downto 0);
+   signal row : unsigned(10 downto 0);
+   signal column : unsigned(10 downto 0);
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;

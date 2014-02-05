@@ -55,6 +55,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="atlys_lab_video.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="atlys_lab_video.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="atlys_lab_video.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="atlys_lab_video_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="atlys_lab_video_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="atlys_lab_video_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="atlys_lab_video_map.mrp" xil_pn:subbranch="Map"/>
@@ -79,13 +80,10 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="h_sync_gen.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="h_sync_gen.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="h_sync_gen.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="h_sync_testbench_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="h_sync_testbench_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="h_sync_testbench_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="h_sync_testbench_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="pixel_gen.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="pixel_gen.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="pixel_gen.xst"/>
@@ -98,6 +96,10 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="vga_sync.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="vga_sync.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="vga_sync.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="vga_sync_test_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="vga_sync_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="vga_sync_test_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="vga_sync_test_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
@@ -110,9 +112,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1391637291" xil_pn:in_ck="617879941964418457" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1391637291">
+    <transform xil_pn:end_ts="1391637464" xil_pn:in_ck="617879941964418457" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1391637464">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TDMS_encoder.vhd"/>
       <outfile xil_pn:name="atlys_lab_video.vhd"/>
       <outfile xil_pn:name="dvid.vhd"/>
@@ -124,11 +130,11 @@
       <outfile xil_pn:name="vga_sync.vhd"/>
       <outfile xil_pn:name="vga_sync_test.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1391637316" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3334262509067514663" xil_pn:start_ts="1391637316">
+    <transform xil_pn:end_ts="1391637383" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8228363422099044047" xil_pn:start_ts="1391637383">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1391637316" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="798146999909528407" xil_pn:start_ts="1391637316">
+    <transform xil_pn:end_ts="1391637383" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2565975071334135475" xil_pn:start_ts="1391637383">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -136,9 +142,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1391637316" xil_pn:in_ck="617879941964418457" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1391637316">
+    <transform xil_pn:end_ts="1391637468" xil_pn:in_ck="617879941964418457" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1391637468">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TDMS_encoder.vhd"/>
       <outfile xil_pn:name="atlys_lab_video.vhd"/>
       <outfile xil_pn:name="dvid.vhd"/>
@@ -150,22 +161,30 @@
       <outfile xil_pn:name="vga_sync.vhd"/>
       <outfile xil_pn:name="vga_sync_test.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1391637322" xil_pn:in_ck="617879941964418457" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6975476194647126254" xil_pn:start_ts="1391637316">
+    <transform xil_pn:end_ts="1391637473" xil_pn:in_ck="617879941964418457" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7002874976913389854" xil_pn:start_ts="1391637468">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="h_sync_testbench_beh.prj"/>
-      <outfile xil_pn:name="h_sync_testbench_isim_beh.exe"/>
       <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="vga_sync_test_beh.prj"/>
+      <outfile xil_pn:name="vga_sync_test_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1391637322" xil_pn:in_ck="-8723278729748579950" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8386797709027677119" xil_pn:start_ts="1391637322">
+    <transform xil_pn:end_ts="1391637473" xil_pn:in_ck="-395125216691432230" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5769073576539970155" xil_pn:start_ts="1391637473">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="h_sync_testbench_isim_beh.wdb"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="vga_sync_test_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1391536323" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1391536323">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -195,7 +214,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1391636877" xil_pn:in_ck="8976952964806958332" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="266232638336713645" xil_pn:start_ts="1391636865">
+    <transform xil_pn:end_ts="1391640188" xil_pn:in_ck="8976952964806958332" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="266232638336713645" xil_pn:start_ts="1391640155">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -217,7 +236,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1391636884" xil_pn:in_ck="4047288687453449399" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6882376497399365258" xil_pn:start_ts="1391636877">
+    <transform xil_pn:end_ts="1391640195" xil_pn:in_ck="4047288687453449399" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6882376497399365258" xil_pn:start_ts="1391640188">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -226,11 +245,9 @@
       <outfile xil_pn:name="atlys_lab_video.ngd"/>
       <outfile xil_pn:name="atlys_lab_video_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1391636901" xil_pn:in_ck="4047288687453449400" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-7482935948421254141" xil_pn:start_ts="1391636884">
+    <transform xil_pn:end_ts="1391640212" xil_pn:in_ck="4047288687453449400" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-7482935948421254141" xil_pn:start_ts="1391640195">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="atlys_lab_video.pcf"/>
       <outfile xil_pn:name="atlys_lab_video_map.map"/>
@@ -241,7 +258,7 @@
       <outfile xil_pn:name="atlys_lab_video_summary.xml"/>
       <outfile xil_pn:name="atlys_lab_video_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1391636923" xil_pn:in_ck="-4373487361532946479" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1391636901">
+    <transform xil_pn:end_ts="1391640233" xil_pn:in_ck="-4373487361532946479" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1391640212">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
@@ -255,7 +272,7 @@
       <outfile xil_pn:name="atlys_lab_video_pad.txt"/>
       <outfile xil_pn:name="atlys_lab_video_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1391636943" xil_pn:in_ck="4047288687453449268" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1391636923">
+    <transform xil_pn:end_ts="1391640251" xil_pn:in_ck="4047288687453449268" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1391640233">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
@@ -267,7 +284,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1391636923" xil_pn:in_ck="4047288687453449268" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1391636916">
+    <transform xil_pn:end_ts="1391640233" xil_pn:in_ck="4047288687453449268" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1391640225">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

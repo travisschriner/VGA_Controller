@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: atlys_lab_video.prj
 
@@ -206,8 +206,8 @@ WARNING:Xst:647 - Input <h_blank> is never used. This port will be preserved and
     Found finite state machine <FSM_1> for signal <state_reg>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
-    | Transitions        | 9                                              |
-    | Inputs             | 4                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 5                                              |
     | Outputs            | 8                                              |
     | Clock              | clk (rising_edge)                              |
     | Reset              | reset (positive)                               |
@@ -422,25 +422,27 @@ WARNING:Xst:2677 - Node <vga_sync_instance/v_sync_instance/completed_reg> of seq
 WARNING:Xst:1426 - The value init of the FF/Latch inst_dvid/latched_green_8 hinder the constant cleaning in the block atlys_lab_video.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1710 - FF/Latch <inst_dvid/TDMS_encoder_green/encoded_8> (without init value) has a constant value of 1 in block <atlys_lab_video>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_blue/dc_bias_0> in Unit <atlys_lab_video> is equivalent to the following FF/Latch, which will be removed : <inst_dvid/TDMS_encoder_green/dc_bias_0> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_blue/dc_bias_1> in Unit <atlys_lab_video> is equivalent to the following FF/Latch, which will be removed : <inst_dvid/TDMS_encoder_green/dc_bias_1> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_blue/dc_bias_2> in Unit <atlys_lab_video> is equivalent to the following FF/Latch, which will be removed : <inst_dvid/TDMS_encoder_green/dc_bias_2> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_blue/dc_bias_3> in Unit <atlys_lab_video> is equivalent to the following FF/Latch, which will be removed : <inst_dvid/TDMS_encoder_green/dc_bias_3> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/latched_green_7> in Unit <atlys_lab_video> is equivalent to the following 4 FFs/Latches, which will be removed : <inst_dvid/latched_green_5> <inst_dvid/latched_green_3> <inst_dvid/latched_green_1> <inst_dvid/latched_green_0> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/latched_green_9> in Unit <atlys_lab_video> is equivalent to the following 3 FFs/Latches, which will be removed : <inst_dvid/latched_green_6> <inst_dvid/latched_green_4> <inst_dvid/latched_green_2> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/latched_blue_6> in Unit <atlys_lab_video> is equivalent to the following 2 FFs/Latches, which will be removed : <inst_dvid/latched_blue_4> <inst_dvid/latched_blue_2> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/latched_blue_7> in Unit <atlys_lab_video> is equivalent to the following 4 FFs/Latches, which will be removed : <inst_dvid/latched_blue_5> <inst_dvid/latched_blue_3> <inst_dvid/latched_blue_1> <inst_dvid/latched_blue_0> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_red/encoded_6> in Unit <atlys_lab_video> is equivalent to the following 2 FFs/Latches, which will be removed : <inst_dvid/TDMS_encoder_red/encoded_4> <inst_dvid/TDMS_encoder_red/encoded_2> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_red/encoded_7> in Unit <atlys_lab_video> is equivalent to the following 4 FFs/Latches, which will be removed : <inst_dvid/TDMS_encoder_red/encoded_5> <inst_dvid/TDMS_encoder_red/encoded_3> <inst_dvid/TDMS_encoder_red/encoded_1> <inst_dvid/TDMS_encoder_red/encoded_0> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_green/encoded_7> in Unit <atlys_lab_video> is equivalent to the following 4 FFs/Latches, which will be removed : <inst_dvid/TDMS_encoder_green/encoded_5> <inst_dvid/TDMS_encoder_green/encoded_3> <inst_dvid/TDMS_encoder_green/encoded_1> <inst_dvid/TDMS_encoder_green/encoded_0> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_green/encoded_9> in Unit <atlys_lab_video> is equivalent to the following 3 FFs/Latches, which will be removed : <inst_dvid/TDMS_encoder_green/encoded_6> <inst_dvid/TDMS_encoder_green/encoded_4> <inst_dvid/TDMS_encoder_green/encoded_2> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_red/dc_bias_3> in Unit <atlys_lab_video> is equivalent to the following FF/Latch, which will be removed : <inst_dvid/TDMS_encoder_red/dc_bias_2> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/latched_red_6> in Unit <atlys_lab_video> is equivalent to the following 2 FFs/Latches, which will be removed : <inst_dvid/latched_red_4> <inst_dvid/latched_red_2> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/latched_red_7> in Unit <atlys_lab_video> is equivalent to the following 4 FFs/Latches, which will be removed : <inst_dvid/latched_red_5> <inst_dvid/latched_red_3> <inst_dvid/latched_red_1> <inst_dvid/latched_red_0> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_blue/encoded_6> in Unit <atlys_lab_video> is equivalent to the following 2 FFs/Latches, which will be removed : <inst_dvid/TDMS_encoder_blue/encoded_4> <inst_dvid/TDMS_encoder_blue/encoded_2> 
+INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_blue/encoded_7> in Unit <atlys_lab_video> is equivalent to the following 4 FFs/Latches, which will be removed : <inst_dvid/TDMS_encoder_blue/encoded_5> <inst_dvid/TDMS_encoder_blue/encoded_3> <inst_dvid/TDMS_encoder_blue/encoded_1> <inst_dvid/TDMS_encoder_blue/encoded_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_red/encoded_5> in Unit <atlys_lab_video> is equivalent to the following 2 FFs/Latches, which will be removed : <inst_dvid/TDMS_encoder_red/encoded_3> <inst_dvid/TDMS_encoder_red/encoded_1> 
-INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_red/encoded_6> in Unit <atlys_lab_video> is equivalent to the following 2 FFs/Latches, which will be removed : <inst_dvid/TDMS_encoder_red/encoded_4> <inst_dvid/TDMS_encoder_red/encoded_2> 
-INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_blue/encoded_7> in Unit <atlys_lab_video> is equivalent to the following 4 FFs/Latches, which will be removed : <inst_dvid/TDMS_encoder_blue/encoded_5> <inst_dvid/TDMS_encoder_blue/encoded_3> <inst_dvid/TDMS_encoder_blue/encoded_1> <inst_dvid/TDMS_encoder_blue/encoded_0> 
-INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_blue/encoded_6> in Unit <atlys_lab_video> is equivalent to the following 2 FFs/Latches, which will be removed : <inst_dvid/TDMS_encoder_blue/encoded_4> <inst_dvid/TDMS_encoder_blue/encoded_2> 
-INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_green/encoded_7> in Unit <atlys_lab_video> is equivalent to the following 4 FFs/Latches, which will be removed : <inst_dvid/TDMS_encoder_green/encoded_5> <inst_dvid/TDMS_encoder_green/encoded_3> <inst_dvid/TDMS_encoder_green/encoded_1> <inst_dvid/TDMS_encoder_green/encoded_0> 
-INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_green/encoded_9> in Unit <atlys_lab_video> is equivalent to the following 3 FFs/Latches, which will be removed : <inst_dvid/TDMS_encoder_green/encoded_6> <inst_dvid/TDMS_encoder_green/encoded_4> <inst_dvid/TDMS_encoder_green/encoded_2> 
-INFO:Xst:2261 - The FF/Latch <inst_dvid/latched_blue_7> in Unit <atlys_lab_video> is equivalent to the following 4 FFs/Latches, which will be removed : <inst_dvid/latched_blue_5> <inst_dvid/latched_blue_3> <inst_dvid/latched_blue_1> <inst_dvid/latched_blue_0> 
-INFO:Xst:2261 - The FF/Latch <inst_dvid/latched_blue_6> in Unit <atlys_lab_video> is equivalent to the following 2 FFs/Latches, which will be removed : <inst_dvid/latched_blue_4> <inst_dvid/latched_blue_2> 
-INFO:Xst:2261 - The FF/Latch <inst_dvid/latched_green_7> in Unit <atlys_lab_video> is equivalent to the following 4 FFs/Latches, which will be removed : <inst_dvid/latched_green_5> <inst_dvid/latched_green_3> <inst_dvid/latched_green_1> <inst_dvid/latched_green_0> 
-INFO:Xst:2261 - The FF/Latch <inst_dvid/latched_green_9> in Unit <atlys_lab_video> is equivalent to the following 3 FFs/Latches, which will be removed : <inst_dvid/latched_green_6> <inst_dvid/latched_green_4> <inst_dvid/latched_green_2> 
-INFO:Xst:2261 - The FF/Latch <inst_dvid/latched_red_5> in Unit <atlys_lab_video> is equivalent to the following 2 FFs/Latches, which will be removed : <inst_dvid/latched_red_3> <inst_dvid/latched_red_1> 
-INFO:Xst:2261 - The FF/Latch <inst_dvid/latched_red_6> in Unit <atlys_lab_video> is equivalent to the following 2 FFs/Latches, which will be removed : <inst_dvid/latched_red_4> <inst_dvid/latched_red_2> 
 Found area constraint ratio of 100 (+ 5) on block atlys_lab_video, actual ratio is 0.
-INFO:Xst:2260 - The FF/Latch <inst_dvid/TDMS_encoder_red/encoded_5> in Unit <atlys_lab_video> is equivalent to the following FF/Latch : <inst_dvid/TDMS_encoder_red/encoded_0> 
-INFO:Xst:2261 - The FF/Latch <inst_dvid/TDMS_encoder_red/encoded_5> in Unit <atlys_lab_video> is equivalent to the following FF/Latch, which will be removed : <inst_dvid/TDMS_encoder_red/encoded_0> 
-INFO:Xst:2261 - The FF/Latch <inst_dvid/latched_red_5> in Unit <atlys_lab_video> is equivalent to the following FF/Latch, which will be removed : <inst_dvid/latched_red_0> 
 
 Final Macro Processing ...
 
@@ -452,8 +454,8 @@ Unit <atlys_lab_video> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 106
- Flip-Flops                                            : 106
+# Registers                                            : 99
+ Flip-Flops                                            : 99
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -478,28 +480,29 @@ Top Level Output File Name         : atlys_lab_video.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 162
+# BELS                             : 154
 #      GND                         : 1
 #      INV                         : 1
 #      LUT1                        : 10
-#      LUT2                        : 10
-#      LUT3                        : 49
-#      LUT4                        : 22
-#      LUT5                        : 10
-#      LUT6                        : 16
+#      LUT2                        : 9
+#      LUT3                        : 48
+#      LUT4                        : 17
+#      LUT5                        : 11
+#      LUT6                        : 13
 #      MUXCY                       : 20
+#      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 22
-# FlipFlops/Latches                : 111
-#      FD                          : 66
+# FlipFlops/Latches                : 104
+#      FD                          : 64
 #      FDC                         : 28
 #      FDE                         : 1
-#      FDR                         : 12
+#      FDR                         : 7
 #      ODDR2                       : 4
 # Shift Registers                  : 1
 #      SRLC16E                     : 1
-# Clock Buffers                    : 4
-#      BUFG                        : 4
+# Clock Buffers                    : 3
+#      BUFG                        : 3
 # IO Buffers                       : 6
 #      IBUF                        : 1
 #      IBUFG                       : 1
@@ -514,25 +517,25 @@ Selected Device : 6slx45fgg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             111  out of  54576     0%  
- Number of Slice LUTs:                  119  out of  27288     0%  
-    Number used as Logic:               118  out of  27288     0%  
+ Number of Slice Registers:             104  out of  54576     0%  
+ Number of Slice LUTs:                  110  out of  27288     0%  
+    Number used as Logic:               109  out of  27288     0%  
     Number used as Memory:                1  out of   6408     0%  
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    135
-   Number with an unused Flip Flop:      24  out of    135    17%  
-   Number with an unused LUT:            16  out of    135    11%  
-   Number of fully used LUT-FF pairs:    95  out of    135    70%  
-   Number of unique control sets:         6
+ Number of LUT Flip Flop pairs used:    126
+   Number with an unused Flip Flop:      22  out of    126    17%  
+   Number with an unused LUT:            16  out of    126    12%  
+   Number of fully used LUT-FF pairs:    88  out of    126    69%  
+   Number of unique control sets:         5
 
 IO Utilization: 
  Number of IOs:                          10
  Number of bonded IOBs:                  10  out of    316     3%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
 
 ---------------------------
 Partition Resource Summary:
@@ -555,10 +558,9 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | IBUFG+BUFG             | 33    |
+clk                                | DCM_SP:CLKFX           | 61    |
 clk                                | DCM_SP:CLKFX           | 44    |
 clk                                | DCM_SP:CLKFX180        | 4     |
-clk                                | DCM_SP:CLKFX           | 35    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -569,7 +571,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.290ns (Maximum Frequency: 158.994MHz)
+   Minimum period: 4.959ns (Maximum Frequency: 201.671MHz)
    Minimum input arrival time before clock: 2.886ns
    Maximum output required time after clock: No path found
    Maximum combinational path delay: No path found
@@ -580,30 +582,27 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.290ns (frequency: 158.994MHz)
-  Total number of paths / destination ports: 5677 / 127
+  Clock period: 4.959ns (frequency: 201.671MHz)
+  Total number of paths / destination ports: 5972 / 115
 -------------------------------------------------------------------------
-Delay:               6.290ns (Levels of Logic = 6)
-  Source:            vga_sync_instance/v_sync_instance/count_reg_9 (FF)
-  Destination:       vga_sync_instance/v_sync_instance/count_reg_10 (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
+Delay:               3.967ns (Levels of Logic = 3)
+  Source:            inst_dvid/shift_clock_9 (FF)
+  Destination:       inst_dvid/shift_blue_9 (FF)
+  Source Clock:      clk rising 1.3X
+  Destination Clock: clk rising 1.3X
 
-  Data Path: vga_sync_instance/v_sync_instance/count_reg_9 to vga_sync_instance/v_sync_instance/count_reg_10
+  Data Path: inst_dvid/shift_clock_9 to inst_dvid/shift_blue_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.447   0.898  vga_sync_instance/v_sync_instance/count_reg_9 (vga_sync_instance/v_sync_instance/count_reg_9)
-     LUT4:I0->O            2   0.203   0.617  vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>21 (vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_8_o<10>2)
-     LUT4:I3->O            3   0.205   0.651  vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>11 (vga_sync_instance/v_sync_instance/count_reg[10]_GND_18_o_equal_10_o<10>1)
-     LUT6:I5->O            2   0.205   0.845  vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In1 (vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In)
-     LUT6:I3->O            2   0.205   0.617  vga_sync_instance/v_sync_instance/state_reg_FSM_FFd3-In4 (vga_sync_instance/v_sync_instance/state_next<0>)
-     LUT6:I5->O           11   0.205   0.883  vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o1 (vga_sync_instance/v_sync_instance/state_next[2]_state_reg[2]_not_equal_2_o)
-     LUT4:I3->O            1   0.205   0.000  vga_sync_instance/v_sync_instance/Mmux_count_next12 (vga_sync_instance/v_sync_instance/count_next<0>)
-     FDC:D                     0.102          vga_sync_instance/v_sync_instance/count_reg_0
+     FD:C->Q               2   0.447   0.961  inst_dvid/shift_clock_9 (inst_dvid/shift_clock_9)
+     LUT5:I0->O            1   0.203   0.580  inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9>_SW0 (N6)
+     LUT6:I5->O           30   0.205   1.264  inst_dvid/GND_20_o_shift_clock[9]_equal_5_o<9> (inst_dvid/GND_20_o_shift_clock[9]_equal_5_o)
+     LUT3:I2->O            1   0.205   0.000  inst_dvid/Mmux_GND_20_o_latched_red[9]_mux_5_OUT11 (inst_dvid/GND_20_o_latched_red[9]_mux_5_OUT<0>)
+     FD:D                      0.102          inst_dvid/shift_red_0
     ----------------------------------------
-    Total                      6.290ns (1.777ns logic, 4.513ns route)
-                                       (28.3% logic, 71.7% route)
+    Total                      3.967ns (1.162ns logic, 2.805ns route)
+                                       (29.3% logic, 70.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -612,7 +611,7 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
 Offset:              2.886ns (Levels of Logic = 1)
   Source:            reset (PAD)
   Destination:       vga_sync_instance/h_sync_instance/count_reg_10 (FF)
-  Destination Clock: clk rising
+  Destination Clock: clk rising 0.3X
 
   Data Path: reset to vga_sync_instance/h_sync_instance/count_reg_10
                                 Gate     Net
@@ -634,20 +633,20 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    6.290|         |         |         |
+clk            |    6.896|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.15 secs
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 29.06 secs
  
 --> 
 
-Total memory usage is 268672 kilobytes
+Total memory usage is 269312 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   28 (   0 filtered)
-Number of infos    :   18 (   0 filtered)
+Number of infos    :   20 (   0 filtered)
 

@@ -92,10 +92,11 @@ begin
 	
 			
 			
-	process(state_reg, count_reg)
+	process(state_reg, count_reg, h_completed)
 	begin
 		state_next <= state_reg;
 		
+	if(h_completed = '1') then
 		case state_reg is
 		
 		--active vid logic
@@ -122,14 +123,18 @@ begin
 				state_next <= Complete;
 			end if;
 			
-		--completed logich	
+		--completed logic	
 		when Complete =>
+			
 				state_next <= activeVid;
+			
 		end case;
+		end if;
 		
 	end process;
 	
-	--output logic C2C Good explained I needed to add an output buffer
+	
+	--output logic 	
 		process(state_next, count_next)
 	begin
 		case state_next is
@@ -138,21 +143,29 @@ begin
 				blank_next <= '1';
 				column_next <= (others => '0');
 				completed_next <= '0';
+				
+				
 			when backPorch =>
 				v_sync_next <= '1';
 				blank_next <= '1';
 				column_next <= (others => '0');
 				completed_next <= '0';
+				
+				
 			when complete =>
 				v_sync_next <= '1';
 				blank_next <= '1';
 				column_next <= (others => '0');
 				completed_next <= '1';
+				
+				
 			when activeVid =>
 				v_sync_next <= '1';
 				blank_next <= '0';
 				column_next <= count_next;
 				completed_next <= '0';
+				
+				
 			when frontPorch =>
 				v_sync_next <= '1';
 				blank_next <= '1';
