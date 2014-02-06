@@ -20,6 +20,59 @@ My top level component instantiation is a s follows:
 This module basically consisted of wiring up the different components I previously created. 
 
 The basis of the entire program was the H_SYNC_GEN signal. 
+![Sweet H_SYNC_GEN Bra!](h_sync_gen.JPG)
+
+This component is based off the clock and times the pixel in the horizontal plain.
+
+it uses flip-flops and a look-ahead buffer to do stuff. They look like this:
+```vhdl
+	--state reg
+	process(clk, reset)
+	begin
+		if(reset ='1') then
+			state_reg <= activeVid;
+		elsif( rising_edge(clk)) then
+			state_reg <= state_next;
+		end if;
+	end process;
+	
+	
+	--output buf
+	process(clk)
+	begin
+		if(rising_edge(clk)) then
+			h_sync_reg <= h_sync_next;
+			blank_reg <= blank_next;
+			column_reg <= column_next;
+			completed_reg <= completed_next;
+		end if;
+	end process;
+
+```
+
+
+the state diagram for this component is as follows:
+
+![Sweet STD Bra!](STD_h_synch_gen.png)
+
+my v_sync_gen sig follows the same format as my h_sync_gen sig. The major difference is it only increments its internal count when the h_complete signal has been asserted. the block diagram is as follows:
+![v_sync_gen](v_sync_gen.jpg)
+
+The state transition diagram is as follows:
+
+![v_STD](STD_v_sync_gen.png)
+
+Both my v_sync and h_sync combine together into my vga_sync which is as follows:
+
+![vga_sync block diagram](vga_sync.JPG)
+
+the vga_sync combines the blank signals of the v and h sync by the following logic:
+```vhdl
+	blank <= h_blank_sig or v_blank_sig;
+```
+
+
+
 
 
 
