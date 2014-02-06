@@ -53,10 +53,10 @@ it uses flip-flops and a look-ahead buffer to do stuff. They look like this:
 
 the state diagram for this component is as follows:
 
-![Sweet STD Bra!](https://github.com/travisschriner/VGA_Controller/blob/master/STD_h_synch_gen.png)
+![Sweet STD Bra!](STD_h_synch_gen.png)
 
 my v_sync_gen sig follows the same format as my h_sync_gen sig. The major difference is it only increments its internal count when the h_complete signal has been asserted. the block diagram is as follows:
-![v_sync_gen](v_sync_gen.jpg)
+![v_sync_gen](v_sync_gen.JPG)
 
 The state transition diagram is as follows:
 
