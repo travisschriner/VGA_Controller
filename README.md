@@ -17,6 +17,10 @@ Implementation
 My top level component instantiation is a s follows:
 ![Sweet Schematic Bra!](schematic.JPG)
 
+This module basically consisted of wiring up the different components I previously created. 
+
+The basis of the entire program was the H_SYNC_GEN signal. 
+
 
 
 
