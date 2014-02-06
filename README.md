@@ -51,6 +51,28 @@ it uses flip-flops and a look-ahead buffer to do stuff. They look like this:
 ```
 
 
+the state diagram for this component is as follows:
+
+![Sweet STD Bra!](STD_h_synch_gen.png)
+
+my v_sync_gen sig follows the same format as my h_sync_gen sig. The major difference is it only increments its internal count when the h_complete signal has been asserted. the block diagram is as follows:
+![v_sync_gen](v_sync_gen.jpg)
+
+The state transition diagram is as follows:
+
+![v_STD](STD_v_sync_gen.png)
+
+Both my v_sync and h_sync combine together into my vga_sync which is as follows:
+
+![vga_sync block diagram](vga_sync.JPG)
+
+the vga_sync combines the blank signals of the v and h sync by the following logic:
+```vhdl
+	blank <= h_blank_sig or v_blank_sig;
+```
+
+
+
 
 
 
